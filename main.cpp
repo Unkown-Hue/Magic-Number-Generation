@@ -4,7 +4,7 @@
 #include <iostream>
 
 #include "init.h"
-#include "../../../C++Major/User_Includes/time.h"
+#include "time.h"
 std::mt19937_64 rng(std::random_device{}());
 
 
