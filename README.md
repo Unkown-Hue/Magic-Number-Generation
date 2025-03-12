@@ -1,1 +1,3 @@
 # Magic-Number-Generation
+
+ok.
