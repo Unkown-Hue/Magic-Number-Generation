@@ -3,78 +3,42 @@
 #include <random>
 #include <iostream>
 
-#include "init.h"
 #include "time.h"
+#include "init.h"
+#include "BishopBlockers.h"
+#include "RookBlockers.h"
+
 std::mt19937_64 rng(std::random_device{}());
 
-
 namespace Magic{
-
-	static uint64 GetRandomMagic() {
-	    uint64 first = rng() & 0xFFFF;
-	    uint64 second = rng() & 0xFFFF;
-	    uint64 third = rng() & 0xFFFF;
-	    uint64 fourth = rng() & 0xFFFF;
-	    second <<= 16;
-	    third <<= 32;
-	    fourth <<= 48;
-	    return first | second | third | fourth;
-	}
-
-	template<const int square>
-    static void GenerateBlockerCombinationsRook(uint64 *arr, const uint64 *attack_mask) {
-        const uint64 *num_bits = &r_bits[square];
-        for (uint64 i = 1; i < (1ULL << *num_bits); i++) {
-            uint64 blocker = 0ULL;
-            int bit_index = 0;
-            for (int j = 0; j < 64; ++j) {
-                if (*attack_mask & (1ULL << j)) {
-                    if (i & (1ULL << bit_index)) {
-                        blocker |= (1ULL << j);
-                    }
-                    ++bit_index;
-                }
-            }
-            arr[i] = blocker;
-        }
+    uint64 GetRandMagic() {
+        uint64 first = rng() & 0xFFFF;
+        uint64 second = rng() & 0xFFFF;
+        uint64 third = rng() & 0xFFFF;
+        uint64 fourth = rng() & 0xFFFF;
+        second <<= 16;
+        third <<= 32;
+        fourth <<= 48;
+        return first | second | third | fourth;
     }
 
-	template<const int square>
-    static void GenerateBlockerCombinationsBishop(uint64 *arr, const uint64 *attack_mask) {
-        const uint64 *num_bits = &b_bits[square];
-        for (uint64 i = 1; i < (1ULL << *num_bits); i++) {
-            uint64 blocker = 0ULL;
-            int bit_index = 0;
-            for (int j = 0; j < 64; ++j) {
-                if (*attack_mask & (1ULL << j)) {
-                    if (i & (1ULL << bit_index)) {
-                        blocker |= (1ULL << j);
-                    }
-                    ++bit_index;
-                }
-            }
-            arr[i] = blocker;
-        }
+    uint64 GetRandomMagic() {
+        return GetRandMagic() & GetRandMagic() & GetRandMagic();
     }
 
 	template<bool Bishop, const int square>
-    static uint64 GetMagicNumber() {
+    uint64 GetMagicNumber() {
         if constexpr (Bishop) {
-            const uint64 *bishop_mask = &_bishop_mask[square];
-            const uint64 *num_bits = &b_bits[square];
-			const int *amount = &BishopAmount[square];
-			uint64 bishop_blockers[BishopAmount[square]];
-			GenerateBlockerCombinationsBishop<square>(bishop_blockers, bishop_mask);
+            constexpr uint64 bishop_mask = _bishop_mask[square];
+            constexpr uint64 num_bits = b_bits[square];
+			constexpr int amount = BishopAmount[square];
             for (int i = 0; i < 10000000; i++) {
                 bool idx_list[MaxBishopSq] = {};
                 const uint64 magic = GetRandomMagic();
-                //if (magic & 0xFF00000000000000) { makes the program a lot slower up to more than 2x.
-                    //continue;
-                //}
                 bool dupe = false;
-                for (int j = 0; j < *amount; j++) {
-					uint64 blocker = bishop_blockers[j];
-                    const int idx = ((magic * blocker) >> (64 - *num_bits));
+                for (int j = 0; j < amount; j++) {
+					const uint64 blocker = BISHOPBLOCKERS[square][j];
+                    const int idx = ((magic * blocker) >> (64 - num_bits));
                     if (idx_list[idx]) {
                         dupe = true;
                         break;
@@ -87,21 +51,16 @@ namespace Magic{
             }
             return 0ULL;
         } else {
-            const uint64 *rook_mask = &_rook_mask[square];
-            const uint64 *num_bits = &r_bits[square];
-			const int *amount = &RookAmount[square];
-			uint64 rook_blockers[RookAmount[square]];
-			GenerateBlockerCombinationsRook<square>(rook_blockers, rook_mask);
+            constexpr uint64 rook_mask = _rook_mask[square];
+            constexpr uint64 num_bits = r_bits[square];
+			constexpr int amount = RookAmount[square];
             for (int i = 0; i < 10000000; i++) {
                 bool idx_list[MaxRookSq] = {};
                 const uint64 magic = GetRandomMagic();
-                //if (magic & 0xFF00000000000000) { makes the program a lot slower up to more than 2x.
-                    //continue;
-                //}
                 bool dupe = false;
-                for (int j = 0; j < *amount; j++) {
-					uint64 blocker = rook_blockers[j];
-                    const int idx = ((magic * blocker) >> (64 - *num_bits));
+                for (int j = 0; j < amount; j++) {
+					const uint64 blocker = ROOKBLOCKERS[square][j];
+                    const int idx = ((magic * blocker) >> (64 - num_bits));
                     if (idx_list[idx]) {
                         dupe = true;
                         break;

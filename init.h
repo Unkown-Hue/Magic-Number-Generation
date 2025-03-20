@@ -3,13 +3,12 @@ typedef unsigned long long uint64;
 typedef unsigned int uint;
 typedef unsigned char uchar;
 
-inline constexpr int MaxRookSq = 4096;
-inline constexpr int MaxBishopSq = 512;
-
-
 enum { BISHOP, ROOK };
 
-inline constexpr uint64 _r_mask(int square) {
+constexpr int MaxRookSq = 4096;
+constexpr int MaxBishopSq = 512;
+
+constexpr uint64 _r_mask(int square) {
     int rank = square / 8;
     int file = square % 8;
     uint64 attack{0ULL};
@@ -28,7 +27,7 @@ inline constexpr uint64 _r_mask(int square) {
     return attack;
 }
 
-inline constexpr uint64 _b_mask(int square) {
+constexpr uint64 _b_mask(int square) {
     int rank = square / 8;
     int file = square % 8;
     uint64 attack{0ULL};
@@ -47,7 +46,7 @@ inline constexpr uint64 _b_mask(int square) {
     return attack;
 }
 
-inline constexpr int RookAmount[]
+constexpr int RookAmount[]
 {
 4096,
 2048,
@@ -115,7 +114,7 @@ inline constexpr int RookAmount[]
 4096
 };
 
-inline constexpr int BishopAmount[]
+constexpr int BishopAmount[]
 {
 64,
 32,
@@ -183,7 +182,7 @@ inline constexpr int BishopAmount[]
 64
 };
 
-inline constexpr uint64 _rook_mask[]
+constexpr uint64 _rook_mask[]
 {
 _r_mask(0),
 _r_mask(1),
@@ -251,7 +250,7 @@ _r_mask(62),
 _r_mask(63)
 };
 
-inline constexpr uint64 _bishop_mask[]
+constexpr uint64 _bishop_mask[]
 {
 _b_mask(0),
 _b_mask(1),
@@ -319,7 +318,7 @@ _b_mask(62),
 _b_mask(63)
 };
 
-inline constexpr uint64 r_bits[]
+constexpr uint64 r_bits[]
 {
 __builtin_popcountll(_r_mask(0)),
 __builtin_popcountll(_r_mask(1)),
@@ -387,7 +386,7 @@ __builtin_popcountll(_r_mask(62)),
 __builtin_popcountll(_r_mask(63))
 };
 
-inline constexpr uint64 b_bits[]
+constexpr uint64 b_bits[]
 {
 __builtin_popcountll(_b_mask(0)),
 __builtin_popcountll(_b_mask(1)),
@@ -454,3 +453,4 @@ __builtin_popcountll(_b_mask(61)),
 __builtin_popcountll(_b_mask(62)),
 __builtin_popcountll(_b_mask(63))
 };
+
