@@ -11,19 +11,9 @@
 std::mt19937_64 rng(std::random_device{}());
 
 namespace Magic{
-    uint64 GetRandMagic() {
-        uint64 first = rng() & 0xFFFF;
-        uint64 second = rng() & 0xFFFF;
-        uint64 third = rng() & 0xFFFF;
-        uint64 fourth = rng() & 0xFFFF;
-        second <<= 16;
-        third <<= 32;
-        fourth <<= 48;
-        return first | second | third | fourth;
-    }
 
     uint64 GetRandomMagic() {
-        return GetRandMagic() & GetRandMagic() & GetRandMagic();
+        return rng() & rng() & rng();
     }
 
 	template<bool Bishop, const int square>
@@ -77,7 +67,7 @@ namespace Magic{
 };
 
 int main() {
-	std::srand(static_cast<uint32_t>(std::time(nullptr) ^ std::hash<std::thread::id>{}(std::this_thread::get_id()) ^ std::random_device{}()));
+	std::srand(static_cast<uint64_t>(std::time(nullptr) ^ std::hash<std::thread::id>{}(std::this_thread::get_id()) ^ std::random_device{}()));
 	{
 	    std::cout << "Rook_magic[64] = {" << '\n';
 		Timer time;

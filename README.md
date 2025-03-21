@@ -1,3 +1,13 @@
 # Magic-Number-Generation
 
-generates magic numbers for rooks and bishops. I am trying to make it fast by making everything i can constexpr. I still have more to make constexpr.
+# V1
+Generates magic numbers for rooks and bishops. I am trying to make it fast by making everything I can constexpr. I still have more to make constexpr.
+
+# V2
+I made the bishop generation into a constexpr array.
+
+# V3 
+I changed the random number generator to do less calculation speeding up the magic number generation. compiled with the command "g++ -std=c++23 -O3 main.cpp -o main.exe"
+
+# V4
+# *Todo make an algorithm for acepting a magic number that shortens the attempts taken on a candidate magic.*
