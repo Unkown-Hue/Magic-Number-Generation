@@ -2,11 +2,7 @@
 typedef unsigned long long uint64;
 typedef unsigned int uint;
 typedef unsigned char uchar;
-
-enum { BISHOP, ROOK };
-
-constexpr int MaxRookSq = 4096;
-constexpr int MaxBishopSq = 512;
+typedef signed long long sint64;
 
 constexpr uint64 _r_mask(int square) {
     int rank = square / 8;
@@ -454,3 +450,6 @@ __builtin_popcountll(_b_mask(62)),
 __builtin_popcountll(_b_mask(63))
 };
 
+uint64 RookMagic[64];
+
+uint64 BishopMagic[64];
