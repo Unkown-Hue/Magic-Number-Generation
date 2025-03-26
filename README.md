@@ -10,4 +10,8 @@ I made the bishop generation into a constexpr array.
 I changed the random number generator to do less calculation speeding up the magic number generation. compiled with the command "g++ -std=c++23 -O3 main.cpp -o main.exe"
 
 # V4
+<<<<<<< HEAD
 threaded generation. the other 4v was a failure -__-.
+=======
+unrolled some loops to make use of more constexpr values. I have not verified if this works. Its suspiciously fast
+>>>>>>> fc6dc0d829b206e49284c27d5af64fd04f847a71
