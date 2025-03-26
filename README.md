@@ -10,4 +10,4 @@ I made the bishop generation into a constexpr array.
 I changed the random number generator to do less calculation speeding up the magic number generation. compiled with the command "g++ -std=c++23 -O3 main.cpp -o main.exe"
 
 # V4
-# *Todo make an algorithm for acepting a magic number that shortens the attempts taken on a candidate magic.*
+unrolled some loops to make use of more constexpr values. I have not verified if this works. Its suspiciously fast
