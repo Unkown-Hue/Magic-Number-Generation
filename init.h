@@ -450,6 +450,3 @@ __builtin_popcountll(_b_mask(62)),
 __builtin_popcountll(_b_mask(63))
 };
 
-uint64 RookMagic[64];
-
-uint64 BishopMagic[64];
