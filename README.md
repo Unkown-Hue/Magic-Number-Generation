@@ -12,4 +12,5 @@ I changed the random number generator to do less calculation speeding up the mag
 # V4
 threaded generation. the other 4v was a failure -__-.
 
-# V5 better candidate number generation and few tweeks
+# 
+V5 better candidate number generation and few tweeks
