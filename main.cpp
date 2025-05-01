@@ -37,9 +37,9 @@ std::mt19937_64 rng(GetRandomBits2());
 
 namespace Magic{
 	template<bool Bishop, const int square>
-    uint64 GetMagicNumber() {
-        if constexpr (Bishop) {
-            constexpr uint64 bishop_mask = _bishop_mask[square];
+	uint64 GetMagicNumber() {
+		if constexpr (Bishop) {
+			constexpr uint64 bishop_mask = _bishop_mask[square];
             constexpr uint64 num_bits = 64 - b_bits[square];
 			constexpr int amount = BishopAmount[square];
 			uint64 magic;
