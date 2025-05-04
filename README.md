@@ -13,4 +13,7 @@ I changed the random number generator to do less calculation speeding up the mag
 threaded generation. the other 4v was a failure -__-.
 
 # V5 
-better candidate number generation and few tweeks
+better candidate number generation and few tweaks
+
+# V6
+better candidate number generation, faster index calculation and few tweaks again.

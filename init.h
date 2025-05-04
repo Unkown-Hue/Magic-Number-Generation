@@ -1,8 +1,11 @@
 #pragma once
+#include <ctime>
+
 typedef unsigned long long uint64;
 typedef unsigned int uint;
 typedef unsigned char uchar;
 typedef signed long long sint64;
+
 
 constexpr uint64 _r_mask(int square) {
     int rank = square / 8;
