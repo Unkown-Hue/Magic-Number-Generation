@@ -14,9 +14,9 @@
 
 // macros //
 #define R1 (uint64)(rand() & 0xFFFF)
-#define R2 (uint64)( rand() & 0xFFFF)
-#define R3 (uint64)( rand() & 0xFFFF)
-#define R4 (uint64)( rand() & 0xFFFF)
+#define R2 (uint64)(rand() & 0xFFFF)
+#define R3 (uint64)(rand() & 0xFFFF)
+#define R4 (uint64)(rand() & 0xFFFF)
 #define Rand uint64(R1 | (R2 << 16) | (R3 << 32) | (R4 << 48))
 #define GetRandomBits() (Rand & Rand & Rand)
 #define GetRandomBits2() (Rand & Rand & Rand ^ (Rand & Rand)) // fastest -> 196000 - 240000 microseconds not very consistent
@@ -33,13 +33,14 @@
 #define GetRandomMagic2() (GetRandomBits11() & GetRandomBits11() & GetRandomBits11()) // extremely slow -> 2000000
 #define GetRandomMagic3() ((rng() & rng() & rng()) | 0xF00000000000000ULL)
 #define GetRandomMagic4() ((rng() & rng() ) ^ (rng() ^ 0x02F000000000000ULL))
+#define GetRandomMagic5() (GetRandomBits)
 #define BISHOPBLOCKER BISHOPBLOCKERS[square][j]
 #define ROOKBLOCKER ROOKBLOCKERS[square][j]
 #define Count(b) (__builtin_popcountll(b))
 
 
 // magic candidate generator
-uint64 Cgen(uint64 num){ 
+inline uint64 Cgen(uint64 num){ 
     uint64 num2 = num ^ 0xffad0c2f;
     uint64 num4 = num2 ^ num ^ (num ^ (num + 0xffed1cad24dfd1c4));
     uint64 num3 = num2 ^ num;
@@ -48,7 +49,7 @@ uint64 Cgen(uint64 num){
 
 // slower -> std::mt19937_64 rngbase(rand());
 // slower -> std::random_device rd;
-std::mt19937_64 rng(GetRandomBits11());
+std::mt19937_64 rng(GetRandomBits5());
 // slower -> std::uniform_int_distribution<uint64> dist(0xffff, UINT64_MAX);
 // slower -> std::mt19937_64 rng(std::random_device(){});
 
@@ -66,8 +67,8 @@ namespace Magic{
             int idx;
             int i;
             int j;
-            uint8_t idx_list[512]; // changed allocation size to only use as much as needed.
-            bool dupe;  
+            uint8_t idx_list[amount]; // changed allocation size to only use as much as needed.
+            int_fast8_t dupe;  
             for (i = 0; i < 10000000; i++) {
                 memset(idx_list, 0, amount);
                 magic = GetRandomMagic();
@@ -97,15 +98,16 @@ namespace Magic{
             int idx;
             int i;
             int j;
-            bool dupe;
+            int_fast8_t dupe;
             //bool idx_list[4096];
-            uint8_t idx_list[4096]; // seems faster than putting amount
+            uint8_t idx_list[amount]; // seems faster than putting amount
             //char idx_list[amount];
             //uint64 idx_list[amount];
             for (i = 0; i < 10000000; i++) {
                 memset(idx_list, 0, amount);
                 magic = GetRandomMagic();
-                //if (Count((magic * rook_mask) & 0xff0000000000000ULL) < 6) continue; damn. removing this brought it from -> 150000 to 83000 - 87000                dupe = false;
+                //if (Count((magic * rook_mask) & 0xff0000000000000ULL) < 6) continue; damn. removing this brought it from -> 150000 to 83000 - 87000                
+                dupe = false;
                 for (j = 0; j < amount; j++) {
                     //const uint64 blocker = ROOKBLOCKERS[square][j];
                     //idx = (magic * ROOKBLOCKER) >> (num_bits);
