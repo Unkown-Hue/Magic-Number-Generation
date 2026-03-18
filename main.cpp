@@ -30,6 +30,7 @@
 #define GetRandomBits9() (Rand ^ Rand ^ (Rand & (Rand | Rand ^ Rand))) // slow -> 250000 microseconds
 #define GetRandomBits10() (Rand ^ Rand ^ (Rand & (Rand ^ Rand ^ Rand))) // slow -> 250000 microseconds
 #define GetRandomBits11() (Cgen(GetRandomBits2() | GetRandomBits5() ^ GetRandomBits())) // pretty fast -> 192000 -> 225000 more consistent
+#define GetRandomBits12() (splitmax()) // fastest -> 75000 microseconds at times and consistent
 #define GetRandomMagic() (rng() & rng() & rng())
 #define GetRandomMagic2() (GetRandomBits11() & GetRandomBits11() & GetRandomBits11()) // extremely slow -> 2000000
 #define GetRandomMagic3() ((rng() & rng() & rng()) | 0xF00000000000000ULL)
@@ -49,7 +50,7 @@ inline uint64 Cgen(uint64 num){
     return num ^ (num2 + (num2 ^ num3) ^ num4);
 }
 
-std::mt19937_64 rng(GetRandomBits5());
+std::mt19937_64 rng(GetRandomBits12());
 std::mt19937_64 frng(GetRandomBits5());
 
 #define IDX(magic, mask, bits) (unsigned)((int)mask * (int)magic ^ (int)(mask >> 32) * \
