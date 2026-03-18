@@ -1,0 +1,1458 @@
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  ms/call  ms/call  name    
+ 16.67      0.02     0.02        1    20.00    20.52  unsigned long long Magic::GetMagicNumber<false, 7>()
+  8.33      0.03     0.01   384481     0.00     0.00  next()
+  8.33      0.04     0.01        1    10.00    10.52  unsigned long long Magic::GetMagicNumber<false, 0>()
+  8.33      0.05     0.01        1    10.00    10.09  unsigned long long Magic::GetMagicNumber<false, 13>()
+  8.33      0.06     0.01        1    10.00    10.34  unsigned long long Magic::GetMagicNumber<false, 35>()
+  8.33      0.07     0.01        1    10.00    10.52  unsigned long long Magic::GetMagicNumber<false, 3>()
+  8.33      0.08     0.01        1    10.00    10.32  unsigned long long Magic::GetMagicNumber<false, 40>()
+  8.33      0.09     0.01        1    10.00    10.43  unsigned long long Magic::GetMagicNumber<false, 4>()
+  8.33      0.10     0.01        1    10.00    10.16  unsigned long long Magic::GetMagicNumber<false, 53>()
+  8.33      0.11     0.01        1    10.00    10.52  unsigned long long Magic::GetMagicNumber<false, 6>()
+  8.33      0.12     0.01        1    10.00    10.39  unsigned long long Magic::GetMagicNumber<true, 27>()
+  0.00      0.12     0.00   768962     0.00     0.00  rotl(unsigned long, int)
+  0.00      0.12     0.00      624     0.00     0.00  std::__detail::_Mod<unsigned long, 0ul, 1ul, 0ul, true, false>::__calc(unsigned long)
+  0.00      0.12     0.00      624     0.00     0.00  unsigned long std::__detail::__mod<unsigned long, 0ul, 1ul, 0ul>(unsigned long)
+  0.00      0.12     0.00      622     0.00     0.00  std::__detail::_Mod<unsigned long, 312ul, 1ul, 0ul, true, true>::__calc(unsigned long)
+  0.00      0.12     0.00      622     0.00     0.00  unsigned long std::__detail::__mod<unsigned long, 312ul, 1ul, 0ul>(unsigned long)
+  0.00      0.12     0.00        6     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_data() const
+  0.00      0.12     0.00        6     0.00     0.00  std::__is_constant_evaluated()
+  0.00      0.12     0.00        4     0.00     0.00  std::operator&(std::_Ios_Fmtflags, std::_Ios_Fmtflags)
+  0.00      0.12     0.00        3     0.00     0.00  std::chrono::duration<long, std::ratio<1l, 1000000000l> >::count() const
+  0.00      0.12     0.00        3     0.00     0.00  std::chrono::duration<long, std::ratio<1l, 1000000000l> >::duration<long, void>(long const&)
+  0.00      0.12     0.00        2     0.00     0.00  std::hash<std::thread::id>::operator()(std::thread::id const&) const
+  0.00      0.12     0.00        2     0.00     0.00  std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l> > >::time_since_epoch() const
+  0.00      0.12     0.00        2     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_is_local() const
+  0.00      0.12     0.00        2     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_local_data() const
+  0.00      0.12     0.00        2     0.00     0.00  std::_Hash_impl::hash(void const*, unsigned long, unsigned long)
+  0.00      0.12     0.00        2     0.00     0.00  unsigned long std::_Hash_impl::hash<unsigned long>(unsigned long const&)
+  0.00      0.12     0.00        2     0.00     0.00  std::char_traits<char>::copy(char*, char const*, unsigned long)
+  0.00      0.12     0.00        2     0.00     0.00  std::char_traits<char>::assign(char&, char const&)
+  0.00      0.12     0.00        2     0.00     0.00  std::char_traits<char>::length(char const*)
+  0.00      0.12     0.00        2     0.00     0.00  std::this_thread::get_id()
+  0.00      0.12     0.00        2     0.00     0.00  std::random_device::random_device()
+  0.00      0.12     0.00        2     0.00     0.00  std::random_device::~random_device()
+  0.00      0.12     0.00        2     0.00     0.00  std::random_device::operator()()
+  0.00      0.12     0.00        2     0.00     0.00  std::__ptr_traits_ptr_to<char const*, char const, false>::pointer_to(char const&)
+  0.00      0.12     0.00        2     0.00     0.00  std::__ptr_traits_ptr_to<char*, char, false>::pointer_to(char&)
+  0.00      0.12     0.00        2     0.00     0.00  std::mersenne_twister_engine<unsigned long, 64ul, 312ul, 156ul, 31ul, 13043109905998158313ul, 29ul, 6148914691236517205ul, 17ul, 8202884508482404352ul, 37ul, 18444473444759240704ul, 43ul, 6364136223846793005ul>::seed(unsigned long)
+  0.00      0.12     0.00        2     0.00     0.00  std::mersenne_twister_engine<unsigned long, 64ul, 312ul, 156ul, 31ul, 13043109905998158313ul, 29ul, 6148914691236517205ul, 17ul, 8202884508482404352ul, 37ul, 18444473444759240704ul, 43ul, 6364136223846793005ul>::mersenne_twister_engine(unsigned long)
+  0.00      0.12     0.00        2     0.00     0.00  std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l> > >::time_point()
+  0.00      0.12     0.00        2     0.00     0.00  std::chrono::duration_values<long>::zero()
+  0.00      0.12     0.00        2     0.00     0.00  std::chrono::duration<long, std::ratio<1l, 1000000000l> >::zero()
+  0.00      0.12     0.00        2     0.00     0.00  std::thread::id::id(unsigned long)
+  0.00      0.12     0.00        2     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_dispose()
+  0.00      0.12     0.00        2     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_Alloc_hider::_Alloc_hider(char*, std::allocator<char> const&)
+  0.00      0.12     0.00        2     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_Alloc_hider::~_Alloc_hider()
+  0.00      0.12     0.00        2     0.00     0.00  void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag)
+  0.00      0.12     0.00        2     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_local_data()
+  0.00      0.12     0.00        2     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_set_length(unsigned long)
+  0.00      0.12     0.00        2     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_copy_chars(char*, char const*, char const*)
+  0.00      0.12     0.00        2     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_copy(char*, char const*, unsigned long)
+  0.00      0.12     0.00        2     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_length(unsigned long)
+  0.00      0.12     0.00        2     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string<std::allocator<char> >(char const*, std::allocator<char> const&)
+  0.00      0.12     0.00        2     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()
+  0.00      0.12     0.00        2     0.00     0.00  std::ios_base::setf(std::_Ios_Fmtflags, std::_Ios_Fmtflags)
+  0.00      0.12     0.00        2     0.00     0.00  char const* std::__addressof<char const>(char const&)
+  0.00      0.12     0.00        2     0.00     0.00  char* std::__addressof<char>(char&)
+  0.00      0.12     0.00        2     0.00     0.00  std::is_constant_evaluated()
+  0.00      0.12     0.00        2     0.00     0.00  char const* std::addressof<char const>(char const&)
+  0.00      0.12     0.00        2     0.00     0.00  char* std::addressof<char>(char&)
+  0.00      0.12     0.00        2     0.00     0.00  std::operator&=(std::_Ios_Fmtflags&, std::_Ios_Fmtflags)
+  0.00      0.12     0.00        2     0.00     0.00  std::operator~(std::_Ios_Fmtflags)
+  0.00      0.12     0.00        2     0.00     0.00  std::operator|=(std::_Ios_Fmtflags&, std::_Ios_Fmtflags)
+  0.00      0.12     0.00        2     0.00     0.00  std::operator|(std::_Ios_Fmtflags, std::_Ios_Fmtflags)
+  0.00      0.12     0.00        2     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag)::_Guard::_Guard(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*)
+  0.00      0.12     0.00        2     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag)::_Guard::~_Guard()
+  0.00      0.12     0.00        1     0.00     0.00  __static_initialization_and_destruction_0()
+  0.00      0.12     0.00        1     0.00     0.00  Seed()
+  0.00      0.12     0.00        1     0.00     0.03  unsigned long long Magic::GetMagicNumber<false, 10>()
+  0.00      0.12     0.00        1     0.00     0.04  unsigned long long Magic::GetMagicNumber<false, 11>()
+  0.00      0.12     0.00        1     0.00     0.24  unsigned long long Magic::GetMagicNumber<false, 12>()
+  0.00      0.12     0.00        1     0.00     0.03  unsigned long long Magic::GetMagicNumber<false, 14>()
+  0.00      0.12     0.00        1     0.00     0.09  unsigned long long Magic::GetMagicNumber<false, 15>()
+  0.00      0.12     0.00        1     0.00     0.05  unsigned long long Magic::GetMagicNumber<false, 16>()
+  0.00      0.12     0.00        1     0.00     0.13  unsigned long long Magic::GetMagicNumber<false, 17>()
+  0.00      0.12     0.00        1     0.00     0.01  unsigned long long Magic::GetMagicNumber<false, 18>()
+  0.00      0.12     0.00        1     0.00     0.02  unsigned long long Magic::GetMagicNumber<false, 19>()
+  0.00      0.12     0.00        1     0.00     0.04  unsigned long long Magic::GetMagicNumber<false, 1>()
+  0.00      0.12     0.00        1     0.00     0.02  unsigned long long Magic::GetMagicNumber<false, 20>()
+  0.00      0.12     0.00        1     0.00     0.31  unsigned long long Magic::GetMagicNumber<false, 21>()
+  0.00      0.12     0.00        1     0.00     0.06  unsigned long long Magic::GetMagicNumber<false, 22>()
+  0.00      0.12     0.00        1     0.00     0.02  unsigned long long Magic::GetMagicNumber<false, 23>()
+  0.00      0.12     0.00        1     0.00     0.01  unsigned long long Magic::GetMagicNumber<false, 24>()
+  0.00      0.12     0.00        1     0.00     0.00  unsigned long long Magic::GetMagicNumber<false, 25>()
+  0.00      0.12     0.00        1     0.00     0.01  unsigned long long Magic::GetMagicNumber<false, 26>()
+  0.00      0.12     0.00        1     0.00     0.00  unsigned long long Magic::GetMagicNumber<false, 27>()
+  0.00      0.12     0.00        1     0.00     0.05  unsigned long long Magic::GetMagicNumber<false, 28>()
+  0.00      0.12     0.00        1     0.00     0.03  unsigned long long Magic::GetMagicNumber<false, 29>()
+  0.00      0.12     0.00        1     0.00     0.52  unsigned long long Magic::GetMagicNumber<false, 2>()
+  0.00      0.12     0.00        1     0.00     0.02  unsigned long long Magic::GetMagicNumber<false, 30>()
+  0.00      0.12     0.00        1     0.00     0.00  unsigned long long Magic::GetMagicNumber<false, 31>()
+  0.00      0.12     0.00        1     0.00     0.02  unsigned long long Magic::GetMagicNumber<false, 32>()
+  0.00      0.12     0.00        1     0.00     0.01  unsigned long long Magic::GetMagicNumber<false, 33>()
+  0.00      0.12     0.00        1     0.00     0.11  unsigned long long Magic::GetMagicNumber<false, 34>()
+  0.00      0.12     0.00        1     0.00     0.52  unsigned long long Magic::GetMagicNumber<false, 36>()
+  0.00      0.12     0.00        1     0.00     0.18  unsigned long long Magic::GetMagicNumber<false, 37>()
+  0.00      0.12     0.00        1     0.00     0.17  unsigned long long Magic::GetMagicNumber<false, 38>()
+  0.00      0.12     0.00        1     0.00     0.18  unsigned long long Magic::GetMagicNumber<false, 39>()
+  0.00      0.12     0.00        1     0.00     0.05  unsigned long long Magic::GetMagicNumber<false, 41>()
+  0.00      0.12     0.00        1     0.00     0.07  unsigned long long Magic::GetMagicNumber<false, 42>()
+  0.00      0.12     0.00        1     0.00     0.52  unsigned long long Magic::GetMagicNumber<false, 43>()
+  0.00      0.12     0.00        1     0.00     0.23  unsigned long long Magic::GetMagicNumber<false, 44>()
+  0.00      0.12     0.00        1     0.00     0.02  unsigned long long Magic::GetMagicNumber<false, 45>()
+  0.00      0.12     0.00        1     0.00     0.03  unsigned long long Magic::GetMagicNumber<false, 46>()
+  0.00      0.12     0.00        1     0.00     0.32  unsigned long long Magic::GetMagicNumber<false, 47>()
+  0.00      0.12     0.00        1     0.00     0.00  unsigned long long Magic::GetMagicNumber<false, 48>()
+  0.00      0.12     0.00        1     0.00     0.31  unsigned long long Magic::GetMagicNumber<false, 49>()
+  0.00      0.12     0.00        1     0.00     0.04  unsigned long long Magic::GetMagicNumber<false, 50>()
+  0.00      0.12     0.00        1     0.00     0.08  unsigned long long Magic::GetMagicNumber<false, 51>()
+  0.00      0.12     0.00        1     0.00     0.07  unsigned long long Magic::GetMagicNumber<false, 52>()
+  0.00      0.12     0.00        1     0.00     0.04  unsigned long long Magic::GetMagicNumber<false, 54>()
+  0.00      0.12     0.00        1     0.00     0.01  unsigned long long Magic::GetMagicNumber<false, 55>()
+  0.00      0.12     0.00        1     0.00     0.00  unsigned long long Magic::GetMagicNumber<false, 56>()
+  0.00      0.12     0.00        1     0.00     0.05  unsigned long long Magic::GetMagicNumber<false, 57>()
+  0.00      0.12     0.00        1     0.00     0.07  unsigned long long Magic::GetMagicNumber<false, 58>()
+  0.00      0.12     0.00        1     0.00     0.25  unsigned long long Magic::GetMagicNumber<false, 59>()
+  0.00      0.12     0.00        1     0.00     0.08  unsigned long long Magic::GetMagicNumber<false, 5>()
+  0.00      0.12     0.00        1     0.00     0.00  unsigned long long Magic::GetMagicNumber<false, 60>()
+  0.00      0.12     0.00        1     0.00     0.09  unsigned long long Magic::GetMagicNumber<false, 61>()
+  0.00      0.12     0.00        1     0.00     0.02  unsigned long long Magic::GetMagicNumber<false, 62>()
+  0.00      0.12     0.00        1     0.00     0.04  unsigned long long Magic::GetMagicNumber<false, 63>()
+  0.00      0.12     0.00        1     0.00     0.19  unsigned long long Magic::GetMagicNumber<false, 8>()
+  0.00      0.12     0.00        1     0.00     0.01  unsigned long long Magic::GetMagicNumber<false, 9>()
+  0.00      0.12     0.00        1     0.00     0.01  unsigned long long Magic::GetMagicNumber<true, 0>()
+  0.00      0.12     0.00        1     0.00     0.00  unsigned long long Magic::GetMagicNumber<true, 10>()
+  0.00      0.12     0.00        1     0.00     0.01  unsigned long long Magic::GetMagicNumber<true, 11>()
+  0.00      0.12     0.00        1     0.00     0.00  unsigned long long Magic::GetMagicNumber<true, 12>()
+  0.00      0.12     0.00        1     0.00     0.00  unsigned long long Magic::GetMagicNumber<true, 13>()
+  0.00      0.12     0.00        1     0.00     0.00  unsigned long long Magic::GetMagicNumber<true, 14>()
+  0.00      0.12     0.00        1     0.00     0.00  unsigned long long Magic::GetMagicNumber<true, 15>()
+  0.00      0.12     0.00        1     0.00     0.00  unsigned long long Magic::GetMagicNumber<true, 16>()
+  0.00      0.12     0.00        1     0.00     0.00  unsigned long long Magic::GetMagicNumber<true, 17>()
+  0.00      0.12     0.00        1     0.00     0.00  unsigned long long Magic::GetMagicNumber<true, 18>()
+  0.00      0.12     0.00        1     0.00     0.00  unsigned long long Magic::GetMagicNumber<true, 19>()
+  0.00      0.12     0.00        1     0.00     0.00  unsigned long long Magic::GetMagicNumber<true, 1>()
+  0.00      0.12     0.00        1     0.00     0.01  unsigned long long Magic::GetMagicNumber<true, 20>()
+  0.00      0.12     0.00        1     0.00     0.00  unsigned long long Magic::GetMagicNumber<true, 21>()
+  0.00      0.12     0.00        1     0.00     0.00  unsigned long long Magic::GetMagicNumber<true, 22>()
+  0.00      0.12     0.00        1     0.00     0.00  unsigned long long Magic::GetMagicNumber<true, 23>()
+  0.00      0.12     0.00        1     0.00     0.00  unsigned long long Magic::GetMagicNumber<true, 24>()
+  0.00      0.12     0.00        1     0.00     0.00  unsigned long long Magic::GetMagicNumber<true, 25>()
+  0.00      0.12     0.00        1     0.00     0.01  unsigned long long Magic::GetMagicNumber<true, 26>()
+  0.00      0.12     0.00        1     0.00     0.30  unsigned long long Magic::GetMagicNumber<true, 28>()
+  0.00      0.12     0.00        1     0.00     0.03  unsigned long long Magic::GetMagicNumber<true, 29>()
+  0.00      0.12     0.00        1     0.00     0.00  unsigned long long Magic::GetMagicNumber<true, 2>()
+  0.00      0.12     0.00        1     0.00     0.00  unsigned long long Magic::GetMagicNumber<true, 30>()
+  0.00      0.12     0.00        1     0.00     0.00  unsigned long long Magic::GetMagicNumber<true, 31>()
+  0.00      0.12     0.00        1     0.00     0.00  unsigned long long Magic::GetMagicNumber<true, 32>()
+  0.00      0.12     0.00        1     0.00     0.00  unsigned long long Magic::GetMagicNumber<true, 33>()
+  0.00      0.12     0.00        1     0.00     0.00  unsigned long long Magic::GetMagicNumber<true, 34>()
+  0.00      0.12     0.00        1     0.00     0.03  unsigned long long Magic::GetMagicNumber<true, 35>()
+  0.00      0.12     0.00        1     0.00     0.05  unsigned long long Magic::GetMagicNumber<true, 36>()
+  0.00      0.12     0.00        1     0.00     0.00  unsigned long long Magic::GetMagicNumber<true, 37>()
+  0.00      0.12     0.00        1     0.00     0.00  unsigned long long Magic::GetMagicNumber<true, 38>()
+  0.00      0.12     0.00        1     0.00     0.00  unsigned long long Magic::GetMagicNumber<true, 39>()
+  0.00      0.12     0.00        1     0.00     0.00  unsigned long long Magic::GetMagicNumber<true, 3>()
+  0.00      0.12     0.00        1     0.00     0.01  unsigned long long Magic::GetMagicNumber<true, 40>()
+  0.00      0.12     0.00        1     0.00     0.01  unsigned long long Magic::GetMagicNumber<true, 41>()
+  0.00      0.12     0.00        1     0.00     0.01  unsigned long long Magic::GetMagicNumber<true, 42>()
+  0.00      0.12     0.00        1     0.00     0.01  unsigned long long Magic::GetMagicNumber<true, 43>()
+  0.00      0.12     0.00        1     0.00     0.04  unsigned long long Magic::GetMagicNumber<true, 44>()
+  0.00      0.12     0.00        1     0.00     0.01  unsigned long long Magic::GetMagicNumber<true, 45>()
+  0.00      0.12     0.00        1     0.00     0.00  unsigned long long Magic::GetMagicNumber<true, 46>()
+  0.00      0.12     0.00        1     0.00     0.00  unsigned long long Magic::GetMagicNumber<true, 47>()
+  0.00      0.12     0.00        1     0.00     0.00  unsigned long long Magic::GetMagicNumber<true, 48>()
+  0.00      0.12     0.00        1     0.00     0.01  unsigned long long Magic::GetMagicNumber<true, 49>()
+  0.00      0.12     0.00        1     0.00     0.02  unsigned long long Magic::GetMagicNumber<true, 4>()
+  0.00      0.12     0.00        1     0.00     0.00  unsigned long long Magic::GetMagicNumber<true, 50>()
+  0.00      0.12     0.00        1     0.00     0.03  unsigned long long Magic::GetMagicNumber<true, 51>()
+  0.00      0.12     0.00        1     0.00     0.00  unsigned long long Magic::GetMagicNumber<true, 52>()
+  0.00      0.12     0.00        1     0.00     0.01  unsigned long long Magic::GetMagicNumber<true, 53>()
+  0.00      0.12     0.00        1     0.00     0.00  unsigned long long Magic::GetMagicNumber<true, 54>()
+  0.00      0.12     0.00        1     0.00     0.00  unsigned long long Magic::GetMagicNumber<true, 55>()
+  0.00      0.12     0.00        1     0.00     0.00  unsigned long long Magic::GetMagicNumber<true, 56>()
+  0.00      0.12     0.00        1     0.00     0.01  unsigned long long Magic::GetMagicNumber<true, 57>()
+  0.00      0.12     0.00        1     0.00     0.00  unsigned long long Magic::GetMagicNumber<true, 58>()
+  0.00      0.12     0.00        1     0.00     0.00  unsigned long long Magic::GetMagicNumber<true, 59>()
+  0.00      0.12     0.00        1     0.00     0.00  unsigned long long Magic::GetMagicNumber<true, 5>()
+  0.00      0.12     0.00        1     0.00     0.00  unsigned long long Magic::GetMagicNumber<true, 60>()
+  0.00      0.12     0.00        1     0.00     0.00  unsigned long long Magic::GetMagicNumber<true, 61>()
+  0.00      0.12     0.00        1     0.00     0.00  unsigned long long Magic::GetMagicNumber<true, 62>()
+  0.00      0.12     0.00        1     0.00     0.00  unsigned long long Magic::GetMagicNumber<true, 63>()
+  0.00      0.12     0.00        1     0.00     0.00  unsigned long long Magic::GetMagicNumber<true, 6>()
+  0.00      0.12     0.00        1     0.00     0.00  unsigned long long Magic::GetMagicNumber<true, 7>()
+  0.00      0.12     0.00        1     0.00     0.00  unsigned long long Magic::GetMagicNumber<true, 8>()
+  0.00      0.12     0.00        1     0.00     0.00  unsigned long long Magic::GetMagicNumber<true, 9>()
+  0.00      0.12     0.00        1     0.00     0.00  Timer::time_start()
+  0.00      0.12     0.00        1     0.00     0.00  Timer::time_end()
+  0.00      0.12     0.00        1     0.00     0.00  Timer::Timer()
+  0.00      0.12     0.00        1     0.00     0.00  Timer::~Timer()
+  0.00      0.12     0.00        1     0.00     0.00  std::chrono::duration<long, std::ratio<1l, 1000000l> >::count() const
+  0.00      0.12     0.00        1     0.00     0.00  std::enable_if<std::chrono::__is_duration<std::chrono::duration<long, std::ratio<1l, 1000000l> > >::value, std::chrono::duration<long, std::ratio<1l, 1000000l> > >::type std::chrono::duration_cast<std::chrono::duration<long, std::ratio<1l, 1000000l> >, long, std::ratio<1l, 1000000000l> >(std::chrono::duration<long, std::ratio<1l, 1000000000l> > const&)
+  0.00      0.12     0.00        1     0.00     0.00  std::chrono::duration<long, std::ratio<1l, 1000000l> > std::chrono::__duration_cast_impl<std::chrono::duration<long, std::ratio<1l, 1000000l> >, std::ratio<1l, 1000l>, long, true, false>::__cast<long, std::ratio<1l, 1000000000l> >(std::chrono::duration<long, std::ratio<1l, 1000000000l> > const&)
+  0.00      0.12     0.00        1     0.00     0.00  std::chrono::duration<long, std::ratio<1l, 1000000l> >::duration<long, void>(long const&)
+  0.00      0.12     0.00        1     0.00     0.00  std::common_type<std::chrono::duration<long, std::ratio<1l, 1000000000l> >, std::chrono::duration<long, std::ratio<1l, 1000000000l> > >::type std::chrono::operator-<std::chrono::_V2::system_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l> >, std::chrono::duration<long, std::ratio<1l, 1000000000l> > >(std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l> > > const&, std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l> > > const&)
+  0.00      0.12     0.00        1     0.00     0.00  std::common_type<std::chrono::duration<long, std::ratio<1l, 1000000000l> >, std::chrono::duration<long, std::ratio<1l, 1000000000l> > >::type std::chrono::operator-<long, std::ratio<1l, 1000000000l>, long, std::ratio<1l, 1000000000l> >(std::chrono::duration<long, std::ratio<1l, 1000000000l> > const&, std::chrono::duration<long, std::ratio<1l, 1000000000l> > const&)
+
+ %         the percentage of the total running time of the
+time       program used by this function.
+
+cumulative a running sum of the number of seconds accounted
+ seconds   for by this function and those listed above it.
+
+ self      the number of seconds accounted for by this
+seconds    function alone.  This is the major sort for this
+           listing.
+
+calls      the number of times this function was invoked, if
+           this function is profiled, else blank.
+
+ self      the average number of milliseconds spent in this
+ms/call    function per call, if this function is profiled,
+	   else blank.
+
+ total     the average number of milliseconds spent in this
+ms/call    function and its descendents per call, if this
+	   function is profiled, else blank.
+
+name       the name of the function.  This is the minor sort
+           for this listing. The index shows the location of
+	   the function in the gprof listing. If the index is
+	   in parenthesis it shows where it would appear in
+	   the gprof listing if it were to be printed.
+
+Copyright (C) 2012-2024 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+		     Call graph (explanation follows)
+
+
+granularity: each sample hit covers 4 byte(s) for 8.33% of 0.12 seconds
+
+index % time    self  children    called     name
+                                                 <spontaneous>
+[1]    100.0    0.00    0.12                 main [1]
+                0.02    0.00       1/1           unsigned long long Magic::GetMagicNumber<false, 7>() [2]
+                0.01    0.00       1/1           unsigned long long Magic::GetMagicNumber<false, 0>() [3]
+                0.01    0.00       1/1           unsigned long long Magic::GetMagicNumber<false, 3>() [4]
+                0.01    0.00       1/1           unsigned long long Magic::GetMagicNumber<false, 6>() [5]
+                0.01    0.00       1/1           unsigned long long Magic::GetMagicNumber<false, 4>() [6]
+                0.01    0.00       1/1           unsigned long long Magic::GetMagicNumber<true, 27>() [7]
+                0.01    0.00       1/1           unsigned long long Magic::GetMagicNumber<false, 35>() [8]
+                0.01    0.00       1/1           unsigned long long Magic::GetMagicNumber<false, 40>() [9]
+                0.01    0.00       1/1           unsigned long long Magic::GetMagicNumber<false, 53>() [10]
+                0.01    0.00       1/1           unsigned long long Magic::GetMagicNumber<false, 13>() [11]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<false, 2>() [13]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<false, 36>() [14]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<false, 43>() [15]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<false, 47>() [16]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<false, 49>() [17]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<false, 21>() [18]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<true, 28>() [19]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<false, 59>() [20]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<false, 12>() [21]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<false, 44>() [22]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<false, 8>() [23]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<false, 37>() [24]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<false, 39>() [25]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<false, 38>() [26]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<false, 17>() [27]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<false, 34>() [28]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<false, 15>() [29]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<false, 61>() [30]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<false, 51>() [31]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<false, 5>() [32]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<false, 42>() [33]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<false, 52>() [34]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<false, 58>() [35]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<false, 22>() [36]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<true, 36>() [37]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<false, 41>() [38]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<false, 57>() [39]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<false, 16>() [40]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<false, 28>() [41]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<true, 44>() [42]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<false, 63>() [43]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<false, 54>() [44]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<false, 50>() [45]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<false, 1>() [46]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<false, 11>() [47]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<true, 35>() [48]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<false, 29>() [49]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<false, 10>() [50]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<true, 29>() [51]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<true, 51>() [52]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<false, 14>() [53]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<false, 46>() [54]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<false, 20>() [55]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<false, 32>() [56]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<false, 30>() [57]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<false, 62>() [58]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<false, 19>() [59]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<false, 45>() [60]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<true, 4>() [61]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<false, 23>() [62]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<true, 49>() [63]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<false, 55>() [64]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<false, 33>() [65]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<false, 18>() [66]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<false, 9>() [67]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<true, 42>() [68]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<true, 26>() [69]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<true, 41>() [70]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<false, 26>() [71]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<true, 11>() [72]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<true, 43>() [73]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<true, 20>() [74]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<true, 45>() [75]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<false, 24>() [76]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<true, 53>() [77]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<true, 0>() [78]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<true, 57>() [79]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<true, 40>() [80]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<false, 31>() [81]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<true, 2>() [82]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<true, 12>() [83]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<true, 31>() [84]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<true, 56>() [85]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<true, 21>() [86]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<true, 54>() [87]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<true, 63>() [88]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<true, 34>() [89]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<false, 56>() [90]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<true, 61>() [91]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<true, 32>() [92]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<true, 3>() [93]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<true, 37>() [94]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<true, 22>() [95]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<true, 52>() [96]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<true, 60>() [97]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<true, 14>() [98]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<true, 39>() [99]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<true, 62>() [100]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<true, 55>() [101]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<true, 25>() [102]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<true, 47>() [103]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<true, 58>() [104]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<true, 16>() [105]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<false, 48>() [106]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<true, 24>() [107]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<true, 30>() [108]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<true, 5>() [109]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<true, 9>() [110]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<false, 27>() [111]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<false, 60>() [112]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<false, 25>() [113]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<true, 8>() [114]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<true, 10>() [115]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<true, 18>() [116]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<true, 59>() [117]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<true, 13>() [118]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<true, 15>() [119]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<true, 19>() [120]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<true, 23>() [121]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<true, 33>() [122]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<true, 7>() [124]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<true, 50>() [123]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<true, 17>() [125]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<true, 6>() [127]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<true, 38>() [126]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<true, 46>() [128]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<true, 1>() [129]
+                0.00    0.00       1/1           unsigned long long Magic::GetMagicNumber<true, 48>() [130]
+                0.00    0.00       1/384481      next() [12]
+                0.00    0.00       1/2           std::this_thread::get_id() [156]
+                0.00    0.00       1/2           std::hash<std::thread::id>::operator()(std::thread::id const&) const [147]
+                0.00    0.00       1/2           std::random_device::random_device() [157]
+                0.00    0.00       1/2           std::random_device::operator()() [159]
+                0.00    0.00       1/1           Seed() [192]
+                0.00    0.00       1/2           std::random_device::~random_device() [158]
+                0.00    0.00       1/1           Timer::Timer() [195]
+                0.00    0.00       1/1           Timer::~Timer() [196]
+-----------------------------------------------
+                0.02    0.00       1/1           main [1]
+[2]     17.1    0.02    0.00       1         unsigned long long Magic::GetMagicNumber<false, 7>() [2]
+                0.00    0.00   20000/384481      next() [12]
+-----------------------------------------------
+                0.01    0.00       1/1           main [1]
+[3]      8.8    0.01    0.00       1         unsigned long long Magic::GetMagicNumber<false, 0>() [3]
+                0.00    0.00   20000/384481      next() [12]
+-----------------------------------------------
+                0.01    0.00       1/1           main [1]
+[4]      8.8    0.01    0.00       1         unsigned long long Magic::GetMagicNumber<false, 3>() [4]
+                0.00    0.00   20000/384481      next() [12]
+-----------------------------------------------
+                0.01    0.00       1/1           main [1]
+[5]      8.8    0.01    0.00       1         unsigned long long Magic::GetMagicNumber<false, 6>() [5]
+                0.00    0.00   20000/384481      next() [12]
+-----------------------------------------------
+                0.01    0.00       1/1           main [1]
+[6]      8.7    0.01    0.00       1         unsigned long long Magic::GetMagicNumber<false, 4>() [6]
+                0.00    0.00   16490/384481      next() [12]
+-----------------------------------------------
+                0.01    0.00       1/1           main [1]
+[7]      8.7    0.01    0.00       1         unsigned long long Magic::GetMagicNumber<true, 27>() [7]
+                0.00    0.00   15114/384481      next() [12]
+-----------------------------------------------
+                0.01    0.00       1/1           main [1]
+[8]      8.6    0.01    0.00       1         unsigned long long Magic::GetMagicNumber<false, 35>() [8]
+                0.00    0.00   13000/384481      next() [12]
+-----------------------------------------------
+                0.01    0.00       1/1           main [1]
+[9]      8.6    0.01    0.00       1         unsigned long long Magic::GetMagicNumber<false, 40>() [9]
+                0.00    0.00   12288/384481      next() [12]
+-----------------------------------------------
+                0.01    0.00       1/1           main [1]
+[10]     8.5    0.01    0.00       1         unsigned long long Magic::GetMagicNumber<false, 53>() [10]
+                0.00    0.00    6064/384481      next() [12]
+-----------------------------------------------
+                0.01    0.00       1/1           main [1]
+[11]     8.4    0.01    0.00       1         unsigned long long Magic::GetMagicNumber<false, 13>() [11]
+                0.00    0.00    3520/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/384481      main [1]
+                0.00    0.00       2/384481      unsigned long long Magic::GetMagicNumber<true, 48>() [130]
+                0.00    0.00       8/384481      unsigned long long Magic::GetMagicNumber<true, 1>() [129]
+                0.00    0.00      10/384481      unsigned long long Magic::GetMagicNumber<true, 46>() [128]
+                0.00    0.00      12/384481      unsigned long long Magic::GetMagicNumber<true, 6>() [127]
+                0.00    0.00      12/384481      unsigned long long Magic::GetMagicNumber<true, 38>() [126]
+                0.00    0.00      20/384481      unsigned long long Magic::GetMagicNumber<true, 17>() [125]
+                0.00    0.00      30/384481      unsigned long long Magic::GetMagicNumber<true, 7>() [124]
+                0.00    0.00      30/384481      unsigned long long Magic::GetMagicNumber<true, 50>() [123]
+                0.00    0.00      32/384481      unsigned long long Magic::GetMagicNumber<true, 23>() [121]
+                0.00    0.00      32/384481      unsigned long long Magic::GetMagicNumber<true, 33>() [122]
+                0.00    0.00      34/384481      unsigned long long Magic::GetMagicNumber<true, 19>() [120]
+                0.00    0.00      38/384481      unsigned long long Magic::GetMagicNumber<true, 15>() [119]
+                0.00    0.00      40/384481      unsigned long long Magic::GetMagicNumber<true, 13>() [118]
+                0.00    0.00      42/384481      unsigned long long Magic::GetMagicNumber<true, 18>() [116]
+                0.00    0.00      42/384481      unsigned long long Magic::GetMagicNumber<true, 59>() [117]
+                0.00    0.00      50/384481      unsigned long long Magic::GetMagicNumber<true, 10>() [115]
+                0.00    0.00      52/384481      unsigned long long Magic::GetMagicNumber<false, 25>() [113]
+                0.00    0.00      52/384481      unsigned long long Magic::GetMagicNumber<true, 8>() [114]
+                0.00    0.00      54/384481      unsigned long long Magic::GetMagicNumber<false, 27>() [111]
+                0.00    0.00      54/384481      unsigned long long Magic::GetMagicNumber<false, 60>() [112]
+                0.00    0.00      56/384481      unsigned long long Magic::GetMagicNumber<true, 9>() [110]
+                0.00    0.00      58/384481      unsigned long long Magic::GetMagicNumber<true, 5>() [109]
+                0.00    0.00      60/384481      unsigned long long Magic::GetMagicNumber<true, 24>() [107]
+                0.00    0.00      60/384481      unsigned long long Magic::GetMagicNumber<true, 30>() [108]
+                0.00    0.00      64/384481      unsigned long long Magic::GetMagicNumber<false, 48>() [106]
+                0.00    0.00      70/384481      unsigned long long Magic::GetMagicNumber<true, 16>() [105]
+                0.00    0.00      74/384481      unsigned long long Magic::GetMagicNumber<true, 47>() [103]
+                0.00    0.00      74/384481      unsigned long long Magic::GetMagicNumber<true, 58>() [104]
+                0.00    0.00      76/384481      unsigned long long Magic::GetMagicNumber<true, 25>() [102]
+                0.00    0.00      82/384481      unsigned long long Magic::GetMagicNumber<true, 55>() [101]
+                0.00    0.00      94/384481      unsigned long long Magic::GetMagicNumber<true, 62>() [100]
+                0.00    0.00     104/384481      unsigned long long Magic::GetMagicNumber<true, 39>() [99]
+                0.00    0.00     110/384481      unsigned long long Magic::GetMagicNumber<true, 14>() [98]
+                0.00    0.00     116/384481      unsigned long long Magic::GetMagicNumber<true, 22>() [95]
+                0.00    0.00     116/384481      unsigned long long Magic::GetMagicNumber<true, 52>() [96]
+                0.00    0.00     116/384481      unsigned long long Magic::GetMagicNumber<true, 60>() [97]
+                0.00    0.00     122/384481      unsigned long long Magic::GetMagicNumber<true, 37>() [94]
+                0.00    0.00     124/384481      unsigned long long Magic::GetMagicNumber<true, 3>() [93]
+                0.00    0.00     128/384481      unsigned long long Magic::GetMagicNumber<true, 32>() [92]
+                0.00    0.00     132/384481      unsigned long long Magic::GetMagicNumber<true, 61>() [91]
+                0.00    0.00     134/384481      unsigned long long Magic::GetMagicNumber<false, 56>() [90]
+                0.00    0.00     138/384481      unsigned long long Magic::GetMagicNumber<true, 34>() [89]
+                0.00    0.00     140/384481      unsigned long long Magic::GetMagicNumber<true, 63>() [88]
+                0.00    0.00     152/384481      unsigned long long Magic::GetMagicNumber<true, 54>() [87]
+                0.00    0.00     156/384481      unsigned long long Magic::GetMagicNumber<true, 21>() [86]
+                0.00    0.00     166/384481      unsigned long long Magic::GetMagicNumber<true, 31>() [84]
+                0.00    0.00     166/384481      unsigned long long Magic::GetMagicNumber<true, 56>() [85]
+                0.00    0.00     172/384481      unsigned long long Magic::GetMagicNumber<true, 12>() [83]
+                0.00    0.00     174/384481      unsigned long long Magic::GetMagicNumber<true, 2>() [82]
+                0.00    0.00     190/384481      unsigned long long Magic::GetMagicNumber<false, 31>() [81]
+                0.00    0.00     204/384481      unsigned long long Magic::GetMagicNumber<true, 40>() [80]
+                0.00    0.00     216/384481      unsigned long long Magic::GetMagicNumber<true, 57>() [79]
+                0.00    0.00     218/384481      unsigned long long Magic::GetMagicNumber<true, 0>() [78]
+                0.00    0.00     246/384481      unsigned long long Magic::GetMagicNumber<true, 53>() [77]
+                0.00    0.00     250/384481      unsigned long long Magic::GetMagicNumber<false, 24>() [76]
+                0.00    0.00     270/384481      unsigned long long Magic::GetMagicNumber<true, 45>() [75]
+                0.00    0.00     276/384481      unsigned long long Magic::GetMagicNumber<true, 20>() [74]
+                0.00    0.00     302/384481      unsigned long long Magic::GetMagicNumber<true, 43>() [73]
+                0.00    0.00     318/384481      unsigned long long Magic::GetMagicNumber<true, 11>() [72]
+                0.00    0.00     320/384481      unsigned long long Magic::GetMagicNumber<false, 26>() [71]
+                0.00    0.00     336/384481      unsigned long long Magic::GetMagicNumber<true, 41>() [70]
+                0.00    0.00     364/384481      unsigned long long Magic::GetMagicNumber<true, 26>() [69]
+                0.00    0.00     374/384481      unsigned long long Magic::GetMagicNumber<true, 42>() [68]
+                0.00    0.00     390/384481      unsigned long long Magic::GetMagicNumber<false, 9>() [67]
+                0.00    0.00     392/384481      unsigned long long Magic::GetMagicNumber<false, 18>() [66]
+                0.00    0.00     408/384481      unsigned long long Magic::GetMagicNumber<false, 33>() [65]
+                0.00    0.00     442/384481      unsigned long long Magic::GetMagicNumber<false, 55>() [64]
+                0.00    0.00     498/384481      unsigned long long Magic::GetMagicNumber<true, 49>() [63]
+                0.00    0.00     604/384481      unsigned long long Magic::GetMagicNumber<false, 23>() [62]
+                0.00    0.00     618/384481      unsigned long long Magic::GetMagicNumber<true, 4>() [61]
+                0.00    0.00     670/384481      unsigned long long Magic::GetMagicNumber<false, 45>() [60]
+                0.00    0.00     676/384481      unsigned long long Magic::GetMagicNumber<false, 19>() [59]
+                0.00    0.00     780/384481      unsigned long long Magic::GetMagicNumber<false, 62>() [58]
+                0.00    0.00     796/384481      unsigned long long Magic::GetMagicNumber<false, 30>() [57]
+                0.00    0.00     810/384481      unsigned long long Magic::GetMagicNumber<false, 32>() [56]
+                0.00    0.00     960/384481      unsigned long long Magic::GetMagicNumber<false, 20>() [55]
+                0.00    0.00     968/384481      unsigned long long Magic::GetMagicNumber<false, 46>() [54]
+                0.00    0.00     994/384481      unsigned long long Magic::GetMagicNumber<false, 14>() [53]
+                0.00    0.00    1054/384481      unsigned long long Magic::GetMagicNumber<true, 51>() [52]
+                0.00    0.00    1106/384481      unsigned long long Magic::GetMagicNumber<true, 29>() [51]
+                0.00    0.00    1130/384481      unsigned long long Magic::GetMagicNumber<false, 10>() [50]
+                0.00    0.00    1234/384481      unsigned long long Magic::GetMagicNumber<false, 29>() [49]
+                0.00    0.00    1256/384481      unsigned long long Magic::GetMagicNumber<true, 35>() [48]
+                0.00    0.00    1374/384481      unsigned long long Magic::GetMagicNumber<false, 11>() [47]
+                0.00    0.00    1380/384481      unsigned long long Magic::GetMagicNumber<false, 1>() [46]
+                0.00    0.00    1438/384481      unsigned long long Magic::GetMagicNumber<false, 50>() [45]
+                0.00    0.00    1458/384481      unsigned long long Magic::GetMagicNumber<false, 54>() [44]
+                0.00    0.00    1676/384481      unsigned long long Magic::GetMagicNumber<false, 63>() [43]
+                0.00    0.00    1680/384481      unsigned long long Magic::GetMagicNumber<true, 44>() [42]
+                0.00    0.00    1740/384481      unsigned long long Magic::GetMagicNumber<false, 28>() [41]
+                0.00    0.00    1756/384481      unsigned long long Magic::GetMagicNumber<false, 16>() [40]
+                0.00    0.00    1810/384481      unsigned long long Magic::GetMagicNumber<false, 57>() [39]
+                0.00    0.00    1904/384481      unsigned long long Magic::GetMagicNumber<false, 41>() [38]
+                0.00    0.00    1964/384481      unsigned long long Magic::GetMagicNumber<true, 36>() [37]
+                0.00    0.00    2262/384481      unsigned long long Magic::GetMagicNumber<false, 22>() [36]
+                0.00    0.00    2668/384481      unsigned long long Magic::GetMagicNumber<false, 58>() [35]
+                0.00    0.00    2782/384481      unsigned long long Magic::GetMagicNumber<false, 52>() [34]
+                0.00    0.00    2846/384481      unsigned long long Magic::GetMagicNumber<false, 42>() [33]
+                0.00    0.00    3142/384481      unsigned long long Magic::GetMagicNumber<false, 5>() [32]
+                0.00    0.00    3262/384481      unsigned long long Magic::GetMagicNumber<false, 51>() [31]
+                0.00    0.00    3330/384481      unsigned long long Magic::GetMagicNumber<false, 61>() [30]
+                0.00    0.00    3520/384481      unsigned long long Magic::GetMagicNumber<false, 13>() [11]
+                0.00    0.00    3546/384481      unsigned long long Magic::GetMagicNumber<false, 15>() [29]
+                0.00    0.00    4088/384481      unsigned long long Magic::GetMagicNumber<false, 34>() [28]
+                0.00    0.00    4986/384481      unsigned long long Magic::GetMagicNumber<false, 17>() [27]
+                0.00    0.00    6064/384481      unsigned long long Magic::GetMagicNumber<false, 53>() [10]
+                0.00    0.00    6674/384481      unsigned long long Magic::GetMagicNumber<false, 38>() [26]
+                0.00    0.00    6848/384481      unsigned long long Magic::GetMagicNumber<false, 39>() [25]
+                0.00    0.00    6876/384481      unsigned long long Magic::GetMagicNumber<false, 37>() [24]
+                0.00    0.00    7346/384481      unsigned long long Magic::GetMagicNumber<false, 8>() [23]
+                0.00    0.00    8980/384481      unsigned long long Magic::GetMagicNumber<false, 44>() [22]
+                0.00    0.00    9370/384481      unsigned long long Magic::GetMagicNumber<false, 12>() [21]
+                0.00    0.00    9706/384481      unsigned long long Magic::GetMagicNumber<false, 59>() [20]
+                0.00    0.00   11398/384481      unsigned long long Magic::GetMagicNumber<true, 28>() [19]
+                0.00    0.00   11900/384481      unsigned long long Magic::GetMagicNumber<false, 21>() [18]
+                0.00    0.00   11988/384481      unsigned long long Magic::GetMagicNumber<false, 49>() [17]
+                0.00    0.00   12276/384481      unsigned long long Magic::GetMagicNumber<false, 47>() [16]
+                0.00    0.00   12288/384481      unsigned long long Magic::GetMagicNumber<false, 40>() [9]
+                0.00    0.00   13000/384481      unsigned long long Magic::GetMagicNumber<false, 35>() [8]
+                0.00    0.00   15114/384481      unsigned long long Magic::GetMagicNumber<true, 27>() [7]
+                0.00    0.00   16490/384481      unsigned long long Magic::GetMagicNumber<false, 4>() [6]
+                0.00    0.00   20000/384481      unsigned long long Magic::GetMagicNumber<false, 0>() [3]
+                0.00    0.00   20000/384481      unsigned long long Magic::GetMagicNumber<false, 2>() [13]
+                0.00    0.00   20000/384481      unsigned long long Magic::GetMagicNumber<false, 3>() [4]
+                0.00    0.00   20000/384481      unsigned long long Magic::GetMagicNumber<false, 6>() [5]
+                0.00    0.00   20000/384481      unsigned long long Magic::GetMagicNumber<false, 7>() [2]
+                0.00    0.00   20000/384481      unsigned long long Magic::GetMagicNumber<false, 36>() [14]
+                0.00    0.00   20000/384481      unsigned long long Magic::GetMagicNumber<false, 43>() [15]
+[12]     8.3    0.01    0.00  384481         next() [12]
+                0.00    0.00  768962/768962      rotl(unsigned long, int) [137]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[13]     0.4    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<false, 2>() [13]
+                0.00    0.00   20000/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[14]     0.4    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<false, 36>() [14]
+                0.00    0.00   20000/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[15]     0.4    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<false, 43>() [15]
+                0.00    0.00   20000/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[16]     0.3    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<false, 47>() [16]
+                0.00    0.00   12276/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[17]     0.3    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<false, 49>() [17]
+                0.00    0.00   11988/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[18]     0.3    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<false, 21>() [18]
+                0.00    0.00   11900/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[19]     0.2    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<true, 28>() [19]
+                0.00    0.00   11398/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[20]     0.2    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<false, 59>() [20]
+                0.00    0.00    9706/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[21]     0.2    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<false, 12>() [21]
+                0.00    0.00    9370/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[22]     0.2    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<false, 44>() [22]
+                0.00    0.00    8980/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[23]     0.2    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<false, 8>() [23]
+                0.00    0.00    7346/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[24]     0.1    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<false, 37>() [24]
+                0.00    0.00    6876/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[25]     0.1    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<false, 39>() [25]
+                0.00    0.00    6848/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[26]     0.1    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<false, 38>() [26]
+                0.00    0.00    6674/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[27]     0.1    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<false, 17>() [27]
+                0.00    0.00    4986/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[28]     0.1    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<false, 34>() [28]
+                0.00    0.00    4088/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[29]     0.1    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<false, 15>() [29]
+                0.00    0.00    3546/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[30]     0.1    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<false, 61>() [30]
+                0.00    0.00    3330/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[31]     0.1    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<false, 51>() [31]
+                0.00    0.00    3262/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[32]     0.1    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<false, 5>() [32]
+                0.00    0.00    3142/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[33]     0.1    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<false, 42>() [33]
+                0.00    0.00    2846/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[34]     0.1    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<false, 52>() [34]
+                0.00    0.00    2782/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[35]     0.1    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<false, 58>() [35]
+                0.00    0.00    2668/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[36]     0.0    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<false, 22>() [36]
+                0.00    0.00    2262/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[37]     0.0    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<true, 36>() [37]
+                0.00    0.00    1964/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[38]     0.0    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<false, 41>() [38]
+                0.00    0.00    1904/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[39]     0.0    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<false, 57>() [39]
+                0.00    0.00    1810/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[40]     0.0    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<false, 16>() [40]
+                0.00    0.00    1756/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[41]     0.0    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<false, 28>() [41]
+                0.00    0.00    1740/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[42]     0.0    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<true, 44>() [42]
+                0.00    0.00    1680/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[43]     0.0    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<false, 63>() [43]
+                0.00    0.00    1676/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[44]     0.0    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<false, 54>() [44]
+                0.00    0.00    1458/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[45]     0.0    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<false, 50>() [45]
+                0.00    0.00    1438/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[46]     0.0    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<false, 1>() [46]
+                0.00    0.00    1380/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[47]     0.0    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<false, 11>() [47]
+                0.00    0.00    1374/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[48]     0.0    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<true, 35>() [48]
+                0.00    0.00    1256/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[49]     0.0    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<false, 29>() [49]
+                0.00    0.00    1234/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[50]     0.0    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<false, 10>() [50]
+                0.00    0.00    1130/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[51]     0.0    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<true, 29>() [51]
+                0.00    0.00    1106/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[52]     0.0    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<true, 51>() [52]
+                0.00    0.00    1054/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[53]     0.0    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<false, 14>() [53]
+                0.00    0.00     994/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[54]     0.0    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<false, 46>() [54]
+                0.00    0.00     968/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[55]     0.0    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<false, 20>() [55]
+                0.00    0.00     960/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[56]     0.0    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<false, 32>() [56]
+                0.00    0.00     810/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[57]     0.0    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<false, 30>() [57]
+                0.00    0.00     796/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[58]     0.0    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<false, 62>() [58]
+                0.00    0.00     780/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[59]     0.0    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<false, 19>() [59]
+                0.00    0.00     676/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[60]     0.0    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<false, 45>() [60]
+                0.00    0.00     670/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[61]     0.0    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<true, 4>() [61]
+                0.00    0.00     618/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[62]     0.0    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<false, 23>() [62]
+                0.00    0.00     604/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[63]     0.0    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<true, 49>() [63]
+                0.00    0.00     498/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[64]     0.0    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<false, 55>() [64]
+                0.00    0.00     442/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[65]     0.0    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<false, 33>() [65]
+                0.00    0.00     408/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[66]     0.0    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<false, 18>() [66]
+                0.00    0.00     392/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[67]     0.0    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<false, 9>() [67]
+                0.00    0.00     390/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[68]     0.0    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<true, 42>() [68]
+                0.00    0.00     374/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[69]     0.0    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<true, 26>() [69]
+                0.00    0.00     364/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[70]     0.0    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<true, 41>() [70]
+                0.00    0.00     336/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[71]     0.0    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<false, 26>() [71]
+                0.00    0.00     320/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[72]     0.0    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<true, 11>() [72]
+                0.00    0.00     318/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[73]     0.0    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<true, 43>() [73]
+                0.00    0.00     302/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[74]     0.0    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<true, 20>() [74]
+                0.00    0.00     276/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[75]     0.0    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<true, 45>() [75]
+                0.00    0.00     270/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[76]     0.0    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<false, 24>() [76]
+                0.00    0.00     250/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[77]     0.0    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<true, 53>() [77]
+                0.00    0.00     246/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[78]     0.0    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<true, 0>() [78]
+                0.00    0.00     218/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[79]     0.0    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<true, 57>() [79]
+                0.00    0.00     216/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[80]     0.0    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<true, 40>() [80]
+                0.00    0.00     204/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[81]     0.0    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<false, 31>() [81]
+                0.00    0.00     190/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[82]     0.0    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<true, 2>() [82]
+                0.00    0.00     174/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[83]     0.0    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<true, 12>() [83]
+                0.00    0.00     172/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[84]     0.0    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<true, 31>() [84]
+                0.00    0.00     166/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[85]     0.0    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<true, 56>() [85]
+                0.00    0.00     166/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[86]     0.0    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<true, 21>() [86]
+                0.00    0.00     156/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[87]     0.0    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<true, 54>() [87]
+                0.00    0.00     152/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[88]     0.0    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<true, 63>() [88]
+                0.00    0.00     140/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[89]     0.0    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<true, 34>() [89]
+                0.00    0.00     138/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[90]     0.0    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<false, 56>() [90]
+                0.00    0.00     134/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[91]     0.0    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<true, 61>() [91]
+                0.00    0.00     132/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[92]     0.0    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<true, 32>() [92]
+                0.00    0.00     128/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[93]     0.0    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<true, 3>() [93]
+                0.00    0.00     124/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[94]     0.0    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<true, 37>() [94]
+                0.00    0.00     122/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[95]     0.0    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<true, 22>() [95]
+                0.00    0.00     116/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[96]     0.0    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<true, 52>() [96]
+                0.00    0.00     116/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[97]     0.0    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<true, 60>() [97]
+                0.00    0.00     116/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[98]     0.0    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<true, 14>() [98]
+                0.00    0.00     110/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[99]     0.0    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<true, 39>() [99]
+                0.00    0.00     104/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[100]    0.0    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<true, 62>() [100]
+                0.00    0.00      94/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[101]    0.0    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<true, 55>() [101]
+                0.00    0.00      82/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[102]    0.0    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<true, 25>() [102]
+                0.00    0.00      76/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[103]    0.0    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<true, 47>() [103]
+                0.00    0.00      74/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[104]    0.0    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<true, 58>() [104]
+                0.00    0.00      74/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[105]    0.0    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<true, 16>() [105]
+                0.00    0.00      70/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[106]    0.0    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<false, 48>() [106]
+                0.00    0.00      64/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[107]    0.0    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<true, 24>() [107]
+                0.00    0.00      60/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[108]    0.0    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<true, 30>() [108]
+                0.00    0.00      60/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[109]    0.0    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<true, 5>() [109]
+                0.00    0.00      58/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[110]    0.0    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<true, 9>() [110]
+                0.00    0.00      56/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[111]    0.0    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<false, 27>() [111]
+                0.00    0.00      54/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[112]    0.0    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<false, 60>() [112]
+                0.00    0.00      54/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[113]    0.0    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<false, 25>() [113]
+                0.00    0.00      52/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[114]    0.0    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<true, 8>() [114]
+                0.00    0.00      52/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[115]    0.0    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<true, 10>() [115]
+                0.00    0.00      50/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[116]    0.0    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<true, 18>() [116]
+                0.00    0.00      42/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[117]    0.0    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<true, 59>() [117]
+                0.00    0.00      42/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[118]    0.0    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<true, 13>() [118]
+                0.00    0.00      40/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[119]    0.0    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<true, 15>() [119]
+                0.00    0.00      38/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[120]    0.0    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<true, 19>() [120]
+                0.00    0.00      34/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[121]    0.0    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<true, 23>() [121]
+                0.00    0.00      32/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[122]    0.0    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<true, 33>() [122]
+                0.00    0.00      32/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[123]    0.0    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<true, 50>() [123]
+                0.00    0.00      30/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[124]    0.0    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<true, 7>() [124]
+                0.00    0.00      30/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[125]    0.0    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<true, 17>() [125]
+                0.00    0.00      20/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[126]    0.0    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<true, 38>() [126]
+                0.00    0.00      12/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[127]    0.0    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<true, 6>() [127]
+                0.00    0.00      12/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[128]    0.0    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<true, 46>() [128]
+                0.00    0.00      10/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[129]    0.0    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<true, 1>() [129]
+                0.00    0.00       8/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[130]    0.0    0.00    0.00       1         unsigned long long Magic::GetMagicNumber<true, 48>() [130]
+                0.00    0.00       2/384481      next() [12]
+-----------------------------------------------
+                0.00    0.00  768962/768962      next() [12]
+[137]    0.0    0.00    0.00  768962         rotl(unsigned long, int) [137]
+-----------------------------------------------
+                0.00    0.00     624/624         unsigned long std::__detail::__mod<unsigned long, 0ul, 1ul, 0ul>(unsigned long) [139]
+[138]    0.0    0.00    0.00     624         std::__detail::_Mod<unsigned long, 0ul, 1ul, 0ul, true, false>::__calc(unsigned long) [138]
+-----------------------------------------------
+                0.00    0.00     624/624         std::mersenne_twister_engine<unsigned long, 64ul, 312ul, 156ul, 31ul, 13043109905998158313ul, 29ul, 6148914691236517205ul, 17ul, 8202884508482404352ul, 37ul, 18444473444759240704ul, 43ul, 6364136223846793005ul>::seed(unsigned long) [162]
+[139]    0.0    0.00    0.00     624         unsigned long std::__detail::__mod<unsigned long, 0ul, 1ul, 0ul>(unsigned long) [139]
+                0.00    0.00     624/624         std::__detail::_Mod<unsigned long, 0ul, 1ul, 0ul, true, false>::__calc(unsigned long) [138]
+-----------------------------------------------
+                0.00    0.00     622/622         unsigned long std::__detail::__mod<unsigned long, 312ul, 1ul, 0ul>(unsigned long) [141]
+[140]    0.0    0.00    0.00     622         std::__detail::_Mod<unsigned long, 312ul, 1ul, 0ul, true, true>::__calc(unsigned long) [140]
+-----------------------------------------------
+                0.00    0.00     622/622         std::mersenne_twister_engine<unsigned long, 64ul, 312ul, 156ul, 31ul, 13043109905998158313ul, 29ul, 6148914691236517205ul, 17ul, 8202884508482404352ul, 37ul, 18444473444759240704ul, 43ul, 6364136223846793005ul>::seed(unsigned long) [162]
+[141]    0.0    0.00    0.00     622         unsigned long std::__detail::__mod<unsigned long, 312ul, 1ul, 0ul>(unsigned long) [141]
+                0.00    0.00     622/622         std::__detail::_Mod<unsigned long, 312ul, 1ul, 0ul, true, true>::__calc(unsigned long) [140]
+-----------------------------------------------
+                0.00    0.00       2/6           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_is_local() const [149]
+                0.00    0.00       2/6           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_set_length(unsigned long) [173]
+                0.00    0.00       2/6           void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag) [171]
+[142]    0.0    0.00    0.00       6         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_data() const [142]
+-----------------------------------------------
+                0.00    0.00       2/6           std::char_traits<char>::assign(char&, char const&) [154]
+                0.00    0.00       2/6           std::char_traits<char>::length(char const*) [155]
+                0.00    0.00       2/6           std::char_traits<char>::copy(char*, char const*, unsigned long) [153]
+[143]    0.0    0.00    0.00       6         std::__is_constant_evaluated() [143]
+-----------------------------------------------
+                0.00    0.00       2/4           std::operator&=(std::_Ios_Fmtflags&, std::_Ios_Fmtflags) [185]
+                0.00    0.00       2/4           std::ios_base::setf(std::_Ios_Fmtflags, std::_Ios_Fmtflags) [179]
+[144]    0.0    0.00    0.00       4         std::operator&(std::_Ios_Fmtflags, std::_Ios_Fmtflags) [144]
+-----------------------------------------------
+                0.00    0.00       1/3           std::chrono::duration<long, std::ratio<1l, 1000000l> > std::chrono::__duration_cast_impl<std::chrono::duration<long, std::ratio<1l, 1000000l> >, std::ratio<1l, 1000l>, long, true, false>::__cast<long, std::ratio<1l, 1000000000l> >(std::chrono::duration<long, std::ratio<1l, 1000000000l> > const&) [199]
+                0.00    0.00       2/3           std::common_type<std::chrono::duration<long, std::ratio<1l, 1000000000l> >, std::chrono::duration<long, std::ratio<1l, 1000000000l> > >::type std::chrono::operator-<long, std::ratio<1l, 1000000000l>, long, std::ratio<1l, 1000000000l> >(std::chrono::duration<long, std::ratio<1l, 1000000000l> > const&, std::chrono::duration<long, std::ratio<1l, 1000000000l> > const&) [202]
+[145]    0.0    0.00    0.00       3         std::chrono::duration<long, std::ratio<1l, 1000000000l> >::count() const [145]
+-----------------------------------------------
+                0.00    0.00       1/3           std::common_type<std::chrono::duration<long, std::ratio<1l, 1000000000l> >, std::chrono::duration<long, std::ratio<1l, 1000000000l> > >::type std::chrono::operator-<long, std::ratio<1l, 1000000000l>, long, std::ratio<1l, 1000000000l> >(std::chrono::duration<long, std::ratio<1l, 1000000000l> > const&, std::chrono::duration<long, std::ratio<1l, 1000000000l> > const&) [202]
+                0.00    0.00       2/3           std::chrono::duration<long, std::ratio<1l, 1000000000l> >::zero() [166]
+[146]    0.0    0.00    0.00       3         std::chrono::duration<long, std::ratio<1l, 1000000000l> >::duration<long, void>(long const&) [146]
+-----------------------------------------------
+                0.00    0.00       1/2           Seed() [192]
+                0.00    0.00       1/2           main [1]
+[147]    0.0    0.00    0.00       2         std::hash<std::thread::id>::operator()(std::thread::id const&) const [147]
+                0.00    0.00       2/2           unsigned long std::_Hash_impl::hash<unsigned long>(unsigned long const&) [152]
+-----------------------------------------------
+                0.00    0.00       2/2           std::common_type<std::chrono::duration<long, std::ratio<1l, 1000000000l> >, std::chrono::duration<long, std::ratio<1l, 1000000000l> > >::type std::chrono::operator-<std::chrono::_V2::system_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l> >, std::chrono::duration<long, std::ratio<1l, 1000000000l> > >(std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l> > > const&, std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l> > > const&) [201]
+[148]    0.0    0.00    0.00       2         std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l> > >::time_since_epoch() const [148]
+-----------------------------------------------
+                0.00    0.00       2/2           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_dispose() [168]
+[149]    0.0    0.00    0.00       2         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_is_local() const [149]
+                0.00    0.00       2/6           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_data() const [142]
+                0.00    0.00       2/2           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_local_data() const [150]
+-----------------------------------------------
+                0.00    0.00       2/2           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_is_local() const [149]
+[150]    0.0    0.00    0.00       2         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_local_data() const [150]
+                0.00    0.00       2/2           std::__ptr_traits_ptr_to<char const*, char const, false>::pointer_to(char const&) [160]
+-----------------------------------------------
+                0.00    0.00       2/2           unsigned long std::_Hash_impl::hash<unsigned long>(unsigned long const&) [152]
+[151]    0.0    0.00    0.00       2         std::_Hash_impl::hash(void const*, unsigned long, unsigned long) [151]
+-----------------------------------------------
+                0.00    0.00       2/2           std::hash<std::thread::id>::operator()(std::thread::id const&) const [147]
+[152]    0.0    0.00    0.00       2         unsigned long std::_Hash_impl::hash<unsigned long>(unsigned long const&) [152]
+                0.00    0.00       2/2           std::_Hash_impl::hash(void const*, unsigned long, unsigned long) [151]
+-----------------------------------------------
+                0.00    0.00       2/2           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_copy(char*, char const*, unsigned long) [175]
+[153]    0.0    0.00    0.00       2         std::char_traits<char>::copy(char*, char const*, unsigned long) [153]
+                0.00    0.00       2/6           std::__is_constant_evaluated() [143]
+-----------------------------------------------
+                0.00    0.00       2/2           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_set_length(unsigned long) [173]
+[154]    0.0    0.00    0.00       2         std::char_traits<char>::assign(char&, char const&) [154]
+                0.00    0.00       2/6           std::__is_constant_evaluated() [143]
+-----------------------------------------------
+                0.00    0.00       2/2           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string<std::allocator<char> >(char const*, std::allocator<char> const&) [177]
+[155]    0.0    0.00    0.00       2         std::char_traits<char>::length(char const*) [155]
+                0.00    0.00       2/6           std::__is_constant_evaluated() [143]
+-----------------------------------------------
+                0.00    0.00       1/2           Seed() [192]
+                0.00    0.00       1/2           main [1]
+[156]    0.0    0.00    0.00       2         std::this_thread::get_id() [156]
+                0.00    0.00       2/2           std::thread::id::id(unsigned long) [167]
+-----------------------------------------------
+                0.00    0.00       1/2           Seed() [192]
+                0.00    0.00       1/2           main [1]
+[157]    0.0    0.00    0.00       2         std::random_device::random_device() [157]
+                0.00    0.00       2/2           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string<std::allocator<char> >(char const*, std::allocator<char> const&) [177]
+                0.00    0.00       2/2           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string() [178]
+-----------------------------------------------
+                0.00    0.00       1/2           Seed() [192]
+                0.00    0.00       1/2           main [1]
+[158]    0.0    0.00    0.00       2         std::random_device::~random_device() [158]
+-----------------------------------------------
+                0.00    0.00       1/2           Seed() [192]
+                0.00    0.00       1/2           main [1]
+[159]    0.0    0.00    0.00       2         std::random_device::operator()() [159]
+-----------------------------------------------
+                0.00    0.00       2/2           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_local_data() const [150]
+[160]    0.0    0.00    0.00       2         std::__ptr_traits_ptr_to<char const*, char const, false>::pointer_to(char const&) [160]
+                0.00    0.00       2/2           char const* std::addressof<char const>(char const&) [183]
+-----------------------------------------------
+                0.00    0.00       2/2           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_local_data() [172]
+[161]    0.0    0.00    0.00       2         std::__ptr_traits_ptr_to<char*, char, false>::pointer_to(char&) [161]
+                0.00    0.00       2/2           char* std::addressof<char>(char&) [184]
+-----------------------------------------------
+                0.00    0.00       2/2           std::mersenne_twister_engine<unsigned long, 64ul, 312ul, 156ul, 31ul, 13043109905998158313ul, 29ul, 6148914691236517205ul, 17ul, 8202884508482404352ul, 37ul, 18444473444759240704ul, 43ul, 6364136223846793005ul>::mersenne_twister_engine(unsigned long) [163]
+[162]    0.0    0.00    0.00       2         std::mersenne_twister_engine<unsigned long, 64ul, 312ul, 156ul, 31ul, 13043109905998158313ul, 29ul, 6148914691236517205ul, 17ul, 8202884508482404352ul, 37ul, 18444473444759240704ul, 43ul, 6364136223846793005ul>::seed(unsigned long) [162]
+                0.00    0.00     624/624         unsigned long std::__detail::__mod<unsigned long, 0ul, 1ul, 0ul>(unsigned long) [139]
+                0.00    0.00     622/622         unsigned long std::__detail::__mod<unsigned long, 312ul, 1ul, 0ul>(unsigned long) [141]
+-----------------------------------------------
+                0.00    0.00       2/2           __static_initialization_and_destruction_0() [191]
+[163]    0.0    0.00    0.00       2         std::mersenne_twister_engine<unsigned long, 64ul, 312ul, 156ul, 31ul, 13043109905998158313ul, 29ul, 6148914691236517205ul, 17ul, 8202884508482404352ul, 37ul, 18444473444759240704ul, 43ul, 6364136223846793005ul>::mersenne_twister_engine(unsigned long) [163]
+                0.00    0.00       2/2           std::mersenne_twister_engine<unsigned long, 64ul, 312ul, 156ul, 31ul, 13043109905998158313ul, 29ul, 6148914691236517205ul, 17ul, 8202884508482404352ul, 37ul, 18444473444759240704ul, 43ul, 6364136223846793005ul>::seed(unsigned long) [162]
+-----------------------------------------------
+                0.00    0.00       2/2           Timer::Timer() [195]
+[164]    0.0    0.00    0.00       2         std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l> > >::time_point() [164]
+                0.00    0.00       2/2           std::chrono::duration<long, std::ratio<1l, 1000000000l> >::zero() [166]
+-----------------------------------------------
+                0.00    0.00       2/2           std::chrono::duration<long, std::ratio<1l, 1000000000l> >::zero() [166]
+[165]    0.0    0.00    0.00       2         std::chrono::duration_values<long>::zero() [165]
+-----------------------------------------------
+                0.00    0.00       2/2           std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l> > >::time_point() [164]
+[166]    0.0    0.00    0.00       2         std::chrono::duration<long, std::ratio<1l, 1000000000l> >::zero() [166]
+                0.00    0.00       2/2           std::chrono::duration_values<long>::zero() [165]
+                0.00    0.00       2/3           std::chrono::duration<long, std::ratio<1l, 1000000000l> >::duration<long, void>(long const&) [146]
+-----------------------------------------------
+                0.00    0.00       2/2           std::this_thread::get_id() [156]
+[167]    0.0    0.00    0.00       2         std::thread::id::id(unsigned long) [167]
+-----------------------------------------------
+                0.00    0.00       2/2           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string() [178]
+[168]    0.0    0.00    0.00       2         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_dispose() [168]
+                0.00    0.00       2/2           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_is_local() const [149]
+-----------------------------------------------
+                0.00    0.00       2/2           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string<std::allocator<char> >(char const*, std::allocator<char> const&) [177]
+[169]    0.0    0.00    0.00       2         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_Alloc_hider::_Alloc_hider(char*, std::allocator<char> const&) [169]
+-----------------------------------------------
+                0.00    0.00       2/2           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string() [178]
+[170]    0.0    0.00    0.00       2         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_Alloc_hider::~_Alloc_hider() [170]
+-----------------------------------------------
+                0.00    0.00       2/2           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string<std::allocator<char> >(char const*, std::allocator<char> const&) [177]
+[171]    0.0    0.00    0.00       2         void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag) [171]
+                0.00    0.00       2/2           std::is_constant_evaluated() [182]
+                0.00    0.00       2/6           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_data() const [142]
+                0.00    0.00       2/2           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag)::_Guard::_Guard(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*) [189]
+                0.00    0.00       2/2           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_copy_chars(char*, char const*, char const*) [174]
+                0.00    0.00       2/2           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_set_length(unsigned long) [173]
+                0.00    0.00       2/2           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag)::_Guard::~_Guard() [190]
+-----------------------------------------------
+                0.00    0.00       2/2           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string<std::allocator<char> >(char const*, std::allocator<char> const&) [177]
+[172]    0.0    0.00    0.00       2         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_local_data() [172]
+                0.00    0.00       2/2           std::__ptr_traits_ptr_to<char*, char, false>::pointer_to(char&) [161]
+-----------------------------------------------
+                0.00    0.00       2/2           void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag) [171]
+[173]    0.0    0.00    0.00       2         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_set_length(unsigned long) [173]
+                0.00    0.00       2/2           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_length(unsigned long) [176]
+                0.00    0.00       2/6           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_data() const [142]
+                0.00    0.00       2/2           std::char_traits<char>::assign(char&, char const&) [154]
+-----------------------------------------------
+                0.00    0.00       2/2           void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag) [171]
+[174]    0.0    0.00    0.00       2         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_copy_chars(char*, char const*, char const*) [174]
+                0.00    0.00       2/2           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_copy(char*, char const*, unsigned long) [175]
+-----------------------------------------------
+                0.00    0.00       2/2           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_copy_chars(char*, char const*, char const*) [174]
+[175]    0.0    0.00    0.00       2         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_copy(char*, char const*, unsigned long) [175]
+                0.00    0.00       2/2           std::char_traits<char>::copy(char*, char const*, unsigned long) [153]
+-----------------------------------------------
+                0.00    0.00       2/2           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_set_length(unsigned long) [173]
+[176]    0.0    0.00    0.00       2         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_length(unsigned long) [176]
+-----------------------------------------------
+                0.00    0.00       2/2           std::random_device::random_device() [157]
+[177]    0.0    0.00    0.00       2         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string<std::allocator<char> >(char const*, std::allocator<char> const&) [177]
+                0.00    0.00       2/2           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_local_data() [172]
+                0.00    0.00       2/2           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_Alloc_hider::_Alloc_hider(char*, std::allocator<char> const&) [169]
+                0.00    0.00       2/2           std::char_traits<char>::length(char const*) [155]
+                0.00    0.00       2/2           void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag) [171]
+-----------------------------------------------
+                0.00    0.00       2/2           std::random_device::random_device() [157]
+[178]    0.0    0.00    0.00       2         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string() [178]
+                0.00    0.00       2/2           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_dispose() [168]
+                0.00    0.00       2/2           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_Alloc_hider::~_Alloc_hider() [170]
+-----------------------------------------------
+                0.00    0.00       1/2           std::dec(std::ios_base&) [218]
+                0.00    0.00       1/2           std::hex(std::ios_base&) [219]
+[179]    0.0    0.00    0.00       2         std::ios_base::setf(std::_Ios_Fmtflags, std::_Ios_Fmtflags) [179]
+                0.00    0.00       2/2           std::operator~(std::_Ios_Fmtflags) [186]
+                0.00    0.00       2/2           std::operator&=(std::_Ios_Fmtflags&, std::_Ios_Fmtflags) [185]
+                0.00    0.00       2/4           std::operator&(std::_Ios_Fmtflags, std::_Ios_Fmtflags) [144]
+                0.00    0.00       2/2           std::operator|=(std::_Ios_Fmtflags&, std::_Ios_Fmtflags) [187]
+-----------------------------------------------
+                0.00    0.00       2/2           char const* std::addressof<char const>(char const&) [183]
+[180]    0.0    0.00    0.00       2         char const* std::__addressof<char const>(char const&) [180]
+-----------------------------------------------
+                0.00    0.00       2/2           char* std::addressof<char>(char&) [184]
+[181]    0.0    0.00    0.00       2         char* std::__addressof<char>(char&) [181]
+-----------------------------------------------
+                0.00    0.00       2/2           void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag) [171]
+[182]    0.0    0.00    0.00       2         std::is_constant_evaluated() [182]
+-----------------------------------------------
+                0.00    0.00       2/2           std::__ptr_traits_ptr_to<char const*, char const, false>::pointer_to(char const&) [160]
+[183]    0.0    0.00    0.00       2         char const* std::addressof<char const>(char const&) [183]
+                0.00    0.00       2/2           char const* std::__addressof<char const>(char const&) [180]
+-----------------------------------------------
+                0.00    0.00       2/2           std::__ptr_traits_ptr_to<char*, char, false>::pointer_to(char&) [161]
+[184]    0.0    0.00    0.00       2         char* std::addressof<char>(char&) [184]
+                0.00    0.00       2/2           char* std::__addressof<char>(char&) [181]
+-----------------------------------------------
+                0.00    0.00       2/2           std::ios_base::setf(std::_Ios_Fmtflags, std::_Ios_Fmtflags) [179]
+[185]    0.0    0.00    0.00       2         std::operator&=(std::_Ios_Fmtflags&, std::_Ios_Fmtflags) [185]
+                0.00    0.00       2/4           std::operator&(std::_Ios_Fmtflags, std::_Ios_Fmtflags) [144]
+-----------------------------------------------
+                0.00    0.00       2/2           std::ios_base::setf(std::_Ios_Fmtflags, std::_Ios_Fmtflags) [179]
+[186]    0.0    0.00    0.00       2         std::operator~(std::_Ios_Fmtflags) [186]
+-----------------------------------------------
+                0.00    0.00       2/2           std::ios_base::setf(std::_Ios_Fmtflags, std::_Ios_Fmtflags) [179]
+[187]    0.0    0.00    0.00       2         std::operator|=(std::_Ios_Fmtflags&, std::_Ios_Fmtflags) [187]
+                0.00    0.00       2/2           std::operator|(std::_Ios_Fmtflags, std::_Ios_Fmtflags) [188]
+-----------------------------------------------
+                0.00    0.00       2/2           std::operator|=(std::_Ios_Fmtflags&, std::_Ios_Fmtflags) [187]
+[188]    0.0    0.00    0.00       2         std::operator|(std::_Ios_Fmtflags, std::_Ios_Fmtflags) [188]
+-----------------------------------------------
+                0.00    0.00       2/2           void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag) [171]
+[189]    0.0    0.00    0.00       2         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag)::_Guard::_Guard(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*) [189]
+-----------------------------------------------
+                0.00    0.00       2/2           void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag) [171]
+[190]    0.0    0.00    0.00       2         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag)::_Guard::~_Guard() [190]
+-----------------------------------------------
+                0.00    0.00       1/1           _GLOBAL__sub_I_rng [203]
+[191]    0.0    0.00    0.00       1         __static_initialization_and_destruction_0() [191]
+                0.00    0.00       2/2           std::mersenne_twister_engine<unsigned long, 64ul, 312ul, 156ul, 31ul, 13043109905998158313ul, 29ul, 6148914691236517205ul, 17ul, 8202884508482404352ul, 37ul, 18444473444759240704ul, 43ul, 6364136223846793005ul>::mersenne_twister_engine(unsigned long) [163]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[192]    0.0    0.00    0.00       1         Seed() [192]
+                0.00    0.00       1/2           std::this_thread::get_id() [156]
+                0.00    0.00       1/2           std::hash<std::thread::id>::operator()(std::thread::id const&) const [147]
+                0.00    0.00       1/2           std::random_device::random_device() [157]
+                0.00    0.00       1/2           std::random_device::operator()() [159]
+                0.00    0.00       1/2           std::random_device::~random_device() [158]
+-----------------------------------------------
+                0.00    0.00       1/1           Timer::Timer() [195]
+[193]    0.0    0.00    0.00       1         Timer::time_start() [193]
+-----------------------------------------------
+                0.00    0.00       1/1           Timer::~Timer() [196]
+[194]    0.0    0.00    0.00       1         Timer::time_end() [194]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[195]    0.0    0.00    0.00       1         Timer::Timer() [195]
+                0.00    0.00       2/2           std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l> > >::time_point() [164]
+                0.00    0.00       1/1           Timer::time_start() [193]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[196]    0.0    0.00    0.00       1         Timer::~Timer() [196]
+                0.00    0.00       1/1           Timer::time_end() [194]
+                0.00    0.00       1/1           std::common_type<std::chrono::duration<long, std::ratio<1l, 1000000000l> >, std::chrono::duration<long, std::ratio<1l, 1000000000l> > >::type std::chrono::operator-<std::chrono::_V2::system_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l> >, std::chrono::duration<long, std::ratio<1l, 1000000000l> > >(std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l> > > const&, std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l> > > const&) [201]
+                0.00    0.00       1/1           std::enable_if<std::chrono::__is_duration<std::chrono::duration<long, std::ratio<1l, 1000000l> > >::value, std::chrono::duration<long, std::ratio<1l, 1000000l> > >::type std::chrono::duration_cast<std::chrono::duration<long, std::ratio<1l, 1000000l> >, long, std::ratio<1l, 1000000000l> >(std::chrono::duration<long, std::ratio<1l, 1000000000l> > const&) [198]
+                0.00    0.00       1/1           std::chrono::duration<long, std::ratio<1l, 1000000l> >::count() const [197]
+-----------------------------------------------
+                0.00    0.00       1/1           Timer::~Timer() [196]
+[197]    0.0    0.00    0.00       1         std::chrono::duration<long, std::ratio<1l, 1000000l> >::count() const [197]
+-----------------------------------------------
+                0.00    0.00       1/1           Timer::~Timer() [196]
+[198]    0.0    0.00    0.00       1         std::enable_if<std::chrono::__is_duration<std::chrono::duration<long, std::ratio<1l, 1000000l> > >::value, std::chrono::duration<long, std::ratio<1l, 1000000l> > >::type std::chrono::duration_cast<std::chrono::duration<long, std::ratio<1l, 1000000l> >, long, std::ratio<1l, 1000000000l> >(std::chrono::duration<long, std::ratio<1l, 1000000000l> > const&) [198]
+                0.00    0.00       1/1           std::chrono::duration<long, std::ratio<1l, 1000000l> > std::chrono::__duration_cast_impl<std::chrono::duration<long, std::ratio<1l, 1000000l> >, std::ratio<1l, 1000l>, long, true, false>::__cast<long, std::ratio<1l, 1000000000l> >(std::chrono::duration<long, std::ratio<1l, 1000000000l> > const&) [199]
+-----------------------------------------------
+                0.00    0.00       1/1           std::enable_if<std::chrono::__is_duration<std::chrono::duration<long, std::ratio<1l, 1000000l> > >::value, std::chrono::duration<long, std::ratio<1l, 1000000l> > >::type std::chrono::duration_cast<std::chrono::duration<long, std::ratio<1l, 1000000l> >, long, std::ratio<1l, 1000000000l> >(std::chrono::duration<long, std::ratio<1l, 1000000000l> > const&) [198]
+[199]    0.0    0.00    0.00       1         std::chrono::duration<long, std::ratio<1l, 1000000l> > std::chrono::__duration_cast_impl<std::chrono::duration<long, std::ratio<1l, 1000000l> >, std::ratio<1l, 1000l>, long, true, false>::__cast<long, std::ratio<1l, 1000000000l> >(std::chrono::duration<long, std::ratio<1l, 1000000000l> > const&) [199]
+                0.00    0.00       1/3           std::chrono::duration<long, std::ratio<1l, 1000000000l> >::count() const [145]
+                0.00    0.00       1/1           std::chrono::duration<long, std::ratio<1l, 1000000l> >::duration<long, void>(long const&) [200]
+-----------------------------------------------
+                0.00    0.00       1/1           std::chrono::duration<long, std::ratio<1l, 1000000l> > std::chrono::__duration_cast_impl<std::chrono::duration<long, std::ratio<1l, 1000000l> >, std::ratio<1l, 1000l>, long, true, false>::__cast<long, std::ratio<1l, 1000000000l> >(std::chrono::duration<long, std::ratio<1l, 1000000000l> > const&) [199]
+[200]    0.0    0.00    0.00       1         std::chrono::duration<long, std::ratio<1l, 1000000l> >::duration<long, void>(long const&) [200]
+-----------------------------------------------
+                0.00    0.00       1/1           Timer::~Timer() [196]
+[201]    0.0    0.00    0.00       1         std::common_type<std::chrono::duration<long, std::ratio<1l, 1000000000l> >, std::chrono::duration<long, std::ratio<1l, 1000000000l> > >::type std::chrono::operator-<std::chrono::_V2::system_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l> >, std::chrono::duration<long, std::ratio<1l, 1000000000l> > >(std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l> > > const&, std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l> > > const&) [201]
+                0.00    0.00       2/2           std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l> > >::time_since_epoch() const [148]
+                0.00    0.00       1/1           std::common_type<std::chrono::duration<long, std::ratio<1l, 1000000000l> >, std::chrono::duration<long, std::ratio<1l, 1000000000l> > >::type std::chrono::operator-<long, std::ratio<1l, 1000000000l>, long, std::ratio<1l, 1000000000l> >(std::chrono::duration<long, std::ratio<1l, 1000000000l> > const&, std::chrono::duration<long, std::ratio<1l, 1000000000l> > const&) [202]
+-----------------------------------------------
+                0.00    0.00       1/1           std::common_type<std::chrono::duration<long, std::ratio<1l, 1000000000l> >, std::chrono::duration<long, std::ratio<1l, 1000000000l> > >::type std::chrono::operator-<std::chrono::_V2::system_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l> >, std::chrono::duration<long, std::ratio<1l, 1000000000l> > >(std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l> > > const&, std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l> > > const&) [201]
+[202]    0.0    0.00    0.00       1         std::common_type<std::chrono::duration<long, std::ratio<1l, 1000000000l> >, std::chrono::duration<long, std::ratio<1l, 1000000000l> > >::type std::chrono::operator-<long, std::ratio<1l, 1000000000l>, long, std::ratio<1l, 1000000000l> >(std::chrono::duration<long, std::ratio<1l, 1000000000l> > const&, std::chrono::duration<long, std::ratio<1l, 1000000000l> > const&) [202]
+                0.00    0.00       2/3           std::chrono::duration<long, std::ratio<1l, 1000000000l> >::count() const [145]
+                0.00    0.00       1/3           std::chrono::duration<long, std::ratio<1l, 1000000000l> >::duration<long, void>(long const&) [146]
+-----------------------------------------------
+
+ This table describes the call tree of the program, and was sorted by
+ the total amount of time spent in each function and its children.
+
+ Each entry in this table consists of several lines.  The line with the
+ index number at the left hand margin lists the current function.
+ The lines above it list the functions that called this function,
+ and the lines below it list the functions this one called.
+ This line lists:
+     index	A unique number given to each element of the table.
+		Index numbers are sorted numerically.
+		The index number is printed next to every function name so
+		it is easier to look up where the function is in the table.
+
+     % time	This is the percentage of the `total' time that was spent
+		in this function and its children.  Note that due to
+		different viewpoints, functions excluded by options, etc,
+		these numbers will NOT add up to 100%.
+
+     self	This is the total amount of time spent in this function.
+
+     children	This is the total amount of time propagated into this
+		function by its children.
+
+     called	This is the number of times the function was called.
+		If the function called itself recursively, the number
+		only includes non-recursive calls, and is followed by
+		a `+' and the number of recursive calls.
+
+     name	The name of the current function.  The index number is
+		printed after it.  If the function is a member of a
+		cycle, the cycle number is printed between the
+		function's name and the index number.
+
+
+ For the function's parents, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the function into this parent.
+
+     children	This is the amount of time that was propagated from
+		the function's children into this parent.
+
+     called	This is the number of times this parent called the
+		function `/' the total number of times the function
+		was called.  Recursive calls to the function are not
+		included in the number after the `/'.
+
+     name	This is the name of the parent.  The parent's index
+		number is printed after it.  If the parent is a
+		member of a cycle, the cycle number is printed between
+		the name and the index number.
+
+ If the parents of the function cannot be determined, the word
+ `<spontaneous>' is printed in the `name' field, and all the other
+ fields are blank.
+
+ For the function's children, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the child into the function.
+
+     children	This is the amount of time that was propagated from the
+		child's children to the function.
+
+     called	This is the number of times the function called
+		this child `/' the total number of times the child
+		was called.  Recursive calls by the child are not
+		listed in the number after the `/'.
+
+     name	This is the name of the child.  The child's index
+		number is printed after it.  If the child is a
+		member of a cycle, the cycle number is printed
+		between the name and the index number.
+
+ If there are any cycles (circles) in the call graph, there is an
+ entry for the cycle-as-a-whole.  This entry shows who called the
+ cycle (as parents) and the members of the cycle (as children.)
+ The `+' recursive calls entry shows the number of function calls that
+ were internal to the cycle, and the calls entry for each member shows,
+ for that member, how many times it was called from other members of
+ the cycle.
+
+Copyright (C) 2012-2024 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+Index by function name
+
+ [191] __static_initialization_and_destruction_0() [2] unsigned long long Magic::GetMagicNumber<false, 7>() [114] unsigned long long Magic::GetMagicNumber<true, 8>()
+ [192] Seed()                 [23] unsigned long long Magic::GetMagicNumber<false, 8>() [110] unsigned long long Magic::GetMagicNumber<true, 9>()
+  [12] next()                 [67] unsigned long long Magic::GetMagicNumber<false, 9>() [193] Timer::time_start()
+ [137] rotl(unsigned long, int) [78] unsigned long long Magic::GetMagicNumber<true, 0>() [194] Timer::time_end()
+   [3] unsigned long long Magic::GetMagicNumber<false, 0>() [115] unsigned long long Magic::GetMagicNumber<true, 10>() [195] Timer::Timer()
+  [50] unsigned long long Magic::GetMagicNumber<false, 10>() [72] unsigned long long Magic::GetMagicNumber<true, 11>() [196] Timer::~Timer()
+  [47] unsigned long long Magic::GetMagicNumber<false, 11>() [83] unsigned long long Magic::GetMagicNumber<true, 12>() [147] std::hash<std::thread::id>::operator()(std::thread::id const&) const
+  [21] unsigned long long Magic::GetMagicNumber<false, 12>() [118] unsigned long long Magic::GetMagicNumber<true, 13>() [148] std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l> > >::time_since_epoch() const
+  [11] unsigned long long Magic::GetMagicNumber<false, 13>() [98] unsigned long long Magic::GetMagicNumber<true, 14>() [145] std::chrono::duration<long, std::ratio<1l, 1000000000l> >::count() const
+  [53] unsigned long long Magic::GetMagicNumber<false, 14>() [119] unsigned long long Magic::GetMagicNumber<true, 15>() [197] std::chrono::duration<long, std::ratio<1l, 1000000l> >::count() const
+  [29] unsigned long long Magic::GetMagicNumber<false, 15>() [105] unsigned long long Magic::GetMagicNumber<true, 16>() [149] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_is_local() const
+  [40] unsigned long long Magic::GetMagicNumber<false, 16>() [125] unsigned long long Magic::GetMagicNumber<true, 17>() [150] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_local_data() const
+  [27] unsigned long long Magic::GetMagicNumber<false, 17>() [116] unsigned long long Magic::GetMagicNumber<true, 18>() [142] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_data() const
+  [66] unsigned long long Magic::GetMagicNumber<false, 18>() [120] unsigned long long Magic::GetMagicNumber<true, 19>() [151] std::_Hash_impl::hash(void const*, unsigned long, unsigned long)
+  [59] unsigned long long Magic::GetMagicNumber<false, 19>() [129] unsigned long long Magic::GetMagicNumber<true, 1>() [152] unsigned long std::_Hash_impl::hash<unsigned long>(unsigned long const&)
+  [46] unsigned long long Magic::GetMagicNumber<false, 1>() [74] unsigned long long Magic::GetMagicNumber<true, 20>() [153] std::char_traits<char>::copy(char*, char const*, unsigned long)
+  [55] unsigned long long Magic::GetMagicNumber<false, 20>() [86] unsigned long long Magic::GetMagicNumber<true, 21>() [154] std::char_traits<char>::assign(char&, char const&)
+  [18] unsigned long long Magic::GetMagicNumber<false, 21>() [95] unsigned long long Magic::GetMagicNumber<true, 22>() [155] std::char_traits<char>::length(char const*)
+  [36] unsigned long long Magic::GetMagicNumber<false, 22>() [121] unsigned long long Magic::GetMagicNumber<true, 23>() [156] std::this_thread::get_id()
+  [62] unsigned long long Magic::GetMagicNumber<false, 23>() [107] unsigned long long Magic::GetMagicNumber<true, 24>() [157] std::random_device::random_device()
+  [76] unsigned long long Magic::GetMagicNumber<false, 24>() [102] unsigned long long Magic::GetMagicNumber<true, 25>() [158] std::random_device::~random_device()
+ [113] unsigned long long Magic::GetMagicNumber<false, 25>() [69] unsigned long long Magic::GetMagicNumber<true, 26>() [159] std::random_device::operator()()
+  [71] unsigned long long Magic::GetMagicNumber<false, 26>() [7] unsigned long long Magic::GetMagicNumber<true, 27>() [160] std::__ptr_traits_ptr_to<char const*, char const, false>::pointer_to(char const&)
+ [111] unsigned long long Magic::GetMagicNumber<false, 27>() [19] unsigned long long Magic::GetMagicNumber<true, 28>() [161] std::__ptr_traits_ptr_to<char*, char, false>::pointer_to(char&)
+  [41] unsigned long long Magic::GetMagicNumber<false, 28>() [51] unsigned long long Magic::GetMagicNumber<true, 29>() [162] std::mersenne_twister_engine<unsigned long, 64ul, 312ul, 156ul, 31ul, 13043109905998158313ul, 29ul, 6148914691236517205ul, 17ul, 8202884508482404352ul, 37ul, 18444473444759240704ul, 43ul, 6364136223846793005ul>::seed(unsigned long)
+  [49] unsigned long long Magic::GetMagicNumber<false, 29>() [82] unsigned long long Magic::GetMagicNumber<true, 2>() [163] std::mersenne_twister_engine<unsigned long, 64ul, 312ul, 156ul, 31ul, 13043109905998158313ul, 29ul, 6148914691236517205ul, 17ul, 8202884508482404352ul, 37ul, 18444473444759240704ul, 43ul, 6364136223846793005ul>::mersenne_twister_engine(unsigned long)
+  [13] unsigned long long Magic::GetMagicNumber<false, 2>() [108] unsigned long long Magic::GetMagicNumber<true, 30>() [164] std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l> > >::time_point()
+  [57] unsigned long long Magic::GetMagicNumber<false, 30>() [84] unsigned long long Magic::GetMagicNumber<true, 31>() [198] std::enable_if<std::chrono::__is_duration<std::chrono::duration<long, std::ratio<1l, 1000000l> > >::value, std::chrono::duration<long, std::ratio<1l, 1000000l> > >::type std::chrono::duration_cast<std::chrono::duration<long, std::ratio<1l, 1000000l> >, long, std::ratio<1l, 1000000000l> >(std::chrono::duration<long, std::ratio<1l, 1000000000l> > const&)
+  [81] unsigned long long Magic::GetMagicNumber<false, 31>() [92] unsigned long long Magic::GetMagicNumber<true, 32>() [165] std::chrono::duration_values<long>::zero()
+  [56] unsigned long long Magic::GetMagicNumber<false, 32>() [122] unsigned long long Magic::GetMagicNumber<true, 33>() [199] std::chrono::duration<long, std::ratio<1l, 1000000l> > std::chrono::__duration_cast_impl<std::chrono::duration<long, std::ratio<1l, 1000000l> >, std::ratio<1l, 1000l>, long, true, false>::__cast<long, std::ratio<1l, 1000000000l> >(std::chrono::duration<long, std::ratio<1l, 1000000000l> > const&)
+  [65] unsigned long long Magic::GetMagicNumber<false, 33>() [89] unsigned long long Magic::GetMagicNumber<true, 34>() [166] std::chrono::duration<long, std::ratio<1l, 1000000000l> >::zero()
+  [28] unsigned long long Magic::GetMagicNumber<false, 34>() [48] unsigned long long Magic::GetMagicNumber<true, 35>() [146] std::chrono::duration<long, std::ratio<1l, 1000000000l> >::duration<long, void>(long const&)
+   [8] unsigned long long Magic::GetMagicNumber<false, 35>() [37] unsigned long long Magic::GetMagicNumber<true, 36>() [200] std::chrono::duration<long, std::ratio<1l, 1000000l> >::duration<long, void>(long const&)
+  [14] unsigned long long Magic::GetMagicNumber<false, 36>() [94] unsigned long long Magic::GetMagicNumber<true, 37>() [201] std::common_type<std::chrono::duration<long, std::ratio<1l, 1000000000l> >, std::chrono::duration<long, std::ratio<1l, 1000000000l> > >::type std::chrono::operator-<std::chrono::_V2::system_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l> >, std::chrono::duration<long, std::ratio<1l, 1000000000l> > >(std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l> > > const&, std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l> > > const&)
+  [24] unsigned long long Magic::GetMagicNumber<false, 37>() [126] unsigned long long Magic::GetMagicNumber<true, 38>() [202] std::common_type<std::chrono::duration<long, std::ratio<1l, 1000000000l> >, std::chrono::duration<long, std::ratio<1l, 1000000000l> > >::type std::chrono::operator-<long, std::ratio<1l, 1000000000l>, long, std::ratio<1l, 1000000000l> >(std::chrono::duration<long, std::ratio<1l, 1000000000l> > const&, std::chrono::duration<long, std::ratio<1l, 1000000000l> > const&)
+  [26] unsigned long long Magic::GetMagicNumber<false, 38>() [99] unsigned long long Magic::GetMagicNumber<true, 39>() [167] std::thread::id::id(unsigned long)
+  [25] unsigned long long Magic::GetMagicNumber<false, 39>() [93] unsigned long long Magic::GetMagicNumber<true, 3>() [168] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_dispose()
+   [4] unsigned long long Magic::GetMagicNumber<false, 3>() [80] unsigned long long Magic::GetMagicNumber<true, 40>() [169] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_Alloc_hider::_Alloc_hider(char*, std::allocator<char> const&)
+   [9] unsigned long long Magic::GetMagicNumber<false, 40>() [70] unsigned long long Magic::GetMagicNumber<true, 41>() [170] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_Alloc_hider::~_Alloc_hider()
+  [38] unsigned long long Magic::GetMagicNumber<false, 41>() [68] unsigned long long Magic::GetMagicNumber<true, 42>() [171] void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag)
+  [33] unsigned long long Magic::GetMagicNumber<false, 42>() [73] unsigned long long Magic::GetMagicNumber<true, 43>() [172] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_local_data()
+  [15] unsigned long long Magic::GetMagicNumber<false, 43>() [42] unsigned long long Magic::GetMagicNumber<true, 44>() [173] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_set_length(unsigned long)
+  [22] unsigned long long Magic::GetMagicNumber<false, 44>() [75] unsigned long long Magic::GetMagicNumber<true, 45>() [174] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_copy_chars(char*, char const*, char const*)
+  [60] unsigned long long Magic::GetMagicNumber<false, 45>() [128] unsigned long long Magic::GetMagicNumber<true, 46>() [175] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_copy(char*, char const*, unsigned long)
+  [54] unsigned long long Magic::GetMagicNumber<false, 46>() [103] unsigned long long Magic::GetMagicNumber<true, 47>() [176] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_length(unsigned long)
+  [16] unsigned long long Magic::GetMagicNumber<false, 47>() [130] unsigned long long Magic::GetMagicNumber<true, 48>() [177] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string<std::allocator<char> >(char const*, std::allocator<char> const&)
+ [106] unsigned long long Magic::GetMagicNumber<false, 48>() [63] unsigned long long Magic::GetMagicNumber<true, 49>() [178] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()
+  [17] unsigned long long Magic::GetMagicNumber<false, 49>() [61] unsigned long long Magic::GetMagicNumber<true, 4>() [138] std::__detail::_Mod<unsigned long, 0ul, 1ul, 0ul, true, false>::__calc(unsigned long)
+   [6] unsigned long long Magic::GetMagicNumber<false, 4>() [123] unsigned long long Magic::GetMagicNumber<true, 50>() [140] std::__detail::_Mod<unsigned long, 312ul, 1ul, 0ul, true, true>::__calc(unsigned long)
+  [45] unsigned long long Magic::GetMagicNumber<false, 50>() [52] unsigned long long Magic::GetMagicNumber<true, 51>() [139] unsigned long std::__detail::__mod<unsigned long, 0ul, 1ul, 0ul>(unsigned long)
+  [31] unsigned long long Magic::GetMagicNumber<false, 51>() [96] unsigned long long Magic::GetMagicNumber<true, 52>() [141] unsigned long std::__detail::__mod<unsigned long, 312ul, 1ul, 0ul>(unsigned long)
+  [34] unsigned long long Magic::GetMagicNumber<false, 52>() [77] unsigned long long Magic::GetMagicNumber<true, 53>() [179] std::ios_base::setf(std::_Ios_Fmtflags, std::_Ios_Fmtflags)
+  [10] unsigned long long Magic::GetMagicNumber<false, 53>() [87] unsigned long long Magic::GetMagicNumber<true, 54>() [180] char const* std::__addressof<char const>(char const&)
+  [44] unsigned long long Magic::GetMagicNumber<false, 54>() [101] unsigned long long Magic::GetMagicNumber<true, 55>() [181] char* std::__addressof<char>(char&)
+  [64] unsigned long long Magic::GetMagicNumber<false, 55>() [85] unsigned long long Magic::GetMagicNumber<true, 56>() [182] std::is_constant_evaluated()
+  [90] unsigned long long Magic::GetMagicNumber<false, 56>() [79] unsigned long long Magic::GetMagicNumber<true, 57>() [143] std::__is_constant_evaluated()
+  [39] unsigned long long Magic::GetMagicNumber<false, 57>() [104] unsigned long long Magic::GetMagicNumber<true, 58>() [183] char const* std::addressof<char const>(char const&)
+  [35] unsigned long long Magic::GetMagicNumber<false, 58>() [117] unsigned long long Magic::GetMagicNumber<true, 59>() [184] char* std::addressof<char>(char&)
+  [20] unsigned long long Magic::GetMagicNumber<false, 59>() [109] unsigned long long Magic::GetMagicNumber<true, 5>() [185] std::operator&=(std::_Ios_Fmtflags&, std::_Ios_Fmtflags)
+  [32] unsigned long long Magic::GetMagicNumber<false, 5>() [97] unsigned long long Magic::GetMagicNumber<true, 60>() [144] std::operator&(std::_Ios_Fmtflags, std::_Ios_Fmtflags)
+ [112] unsigned long long Magic::GetMagicNumber<false, 60>() [91] unsigned long long Magic::GetMagicNumber<true, 61>() [186] std::operator~(std::_Ios_Fmtflags)
+  [30] unsigned long long Magic::GetMagicNumber<false, 61>() [100] unsigned long long Magic::GetMagicNumber<true, 62>() [187] std::operator|=(std::_Ios_Fmtflags&, std::_Ios_Fmtflags)
+  [58] unsigned long long Magic::GetMagicNumber<false, 62>() [88] unsigned long long Magic::GetMagicNumber<true, 63>() [188] std::operator|(std::_Ios_Fmtflags, std::_Ios_Fmtflags)
+  [43] unsigned long long Magic::GetMagicNumber<false, 63>() [127] unsigned long long Magic::GetMagicNumber<true, 6>() [189] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag)::_Guard::_Guard(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*)
+   [5] unsigned long long Magic::GetMagicNumber<false, 6>() [124] unsigned long long Magic::GetMagicNumber<true, 7>() [190] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag)::_Guard::~_Guard()

@@ -11,6 +11,7 @@
 #include "init.h"
 #include "BishopBlockers.h"
 #include "RookBlockers.h"
+#include "random.h"
 
 // macros //
 #define R1 (uint64)(rand() & 0xFFFF)
@@ -33,7 +34,7 @@
 #define GetRandomMagic2() (GetRandomBits11() & GetRandomBits11() & GetRandomBits11()) // extremely slow -> 2000000
 #define GetRandomMagic3() ((rng() & rng() & rng()) | 0xF00000000000000ULL)
 #define GetRandomMagic4() ((rng() & rng() ) ^ (rng() ^ 0x02F000000000000ULL))
-#define GetRandomMagic5() (GetRandomBits)
+#define GetRandomMagic6() (next() + GetRandomMagic())
 #define BISHOPBLOCKER BISHOPBLOCKERS[square][j]
 #define ROOKBLOCKER ROOKBLOCKERS[square][j]
 #define Count(b) (__builtin_popcountll(b))
@@ -47,16 +48,16 @@ inline uint64 Cgen(uint64 num){
     return num ^ (num2 + (num2 ^ num3) ^ num4);
 }
 
-// slower -> std::mt19937_64 rngbase(rand());
-// slower -> std::random_device rd;
 std::mt19937_64 rng(GetRandomBits5());
-// slower -> std::uniform_int_distribution<uint64> dist(0xffff, UINT64_MAX);
-// slower -> std::mt19937_64 rng(std::random_device(){});
+std::mt19937_64 frng(GetRandomBits5());
+
+uint32_t collision_check[4096] = {0};
+uint32_t current_gen = 1;
 
 #define IDX(magic, mask, bits) (unsigned)((int)mask * (int)magic ^ (int)(mask >> 32) * \
                       (int)(magic >> 32)) >> (32 - bits);
 
-namespace Magic{
+namespace fMagic{
     template<bool Bishop, const int square>
     uint64 GetMagicNumber() {
         if constexpr (Bishop) {
@@ -67,25 +68,21 @@ namespace Magic{
             int idx;
             int i;
             int j;
-            uint8_t idx_list[amount]; // changed allocation size to only use as much as needed.
+            uint8_t idx_list[amount];
             int_fast8_t dupe;  
-            for (i = 0; i < 10000000; i++) {
-                memset(idx_list, 0, amount);
+            for (i = 0; i < 10000; i++) {
+                //memset(idx_list, 0, amount);
                 magic = GetRandomMagic();
-                //if (Count((magic * bishop_mask) & 0xFF0000000000000ULL) < 6) continue; dosent matter for the bishop. removing this increases speed -> ~ 155000
                 dupe = false;
                 for (j = 0; j < amount; j++) {
-                    //const uint64 blocker = BISHOPBLOCKERS[square][j];
-                    //idx = (magic * BISHOPBLOCKER) >> (num_bits);
-                    idx = IDX(magic, BISHOPBLOCKER, b_bits[square]); // 32 bit multiplying instead of 64 bit -> from 200000 to 166000 - 186000
-                    if (idx_list[idx]) {
+                    idx = IDX(magic, BISHOPBLOCKER, b_bits[square]);
+                    if (collision_check[idx] == current_gen) {
                         dupe = true;
                         break;
                     }
-                    idx_list[idx] = true;
+                    collision_check[idx] = current_gen;
                 }
                 if (!dupe) {
-                    //std::cout << std::dec << "  bishop fails: " << i << std::hex << "  ";
                     return magic;
                 }
             }
@@ -99,18 +96,74 @@ namespace Magic{
             int i;
             int j;
             int_fast8_t dupe;
-            //bool idx_list[4096];
-            uint8_t idx_list[amount]; // seems faster than putting amount
-            //char idx_list[amount];
-            //uint64 idx_list[amount];
-            for (i = 0; i < 10000000; i++) {
+            uint8_t idx_list[amount];
+            for (i = 0; i < 10000; i++) {
+                //memset(idx_list, 0, amount);
+                magic = GetRandomMagic();
+                dupe = false;
+                ++current_gen;
+                for (j = 0; j < amount; j++) {
+                    idx = IDX(magic, ROOKBLOCKER, r_bits[square]); //
+                    if (collision_check[idx] == current_gen) {
+                        dupe = true;
+                        break;
+                    }
+                    collision_check[idx] = current_gen;
+                }
+                if (!dupe) {
+                    return magic;
+                }
+            }
+            return 0ULL;
+        }
+    }
+};
+
+namespace Magic{
+    template<bool Bishop, const int square>
+    uint64 GetMagicNumber() {
+        if constexpr (Bishop) {
+            constexpr uint64 bishop_mask = _bishop_mask[square];
+            constexpr uint64 num_bits = 64 - b_bits[square];
+            constexpr int amount = BishopAmount[square];
+            uint64 magic;
+            int idx;
+            int i;
+            int j;
+            uint8_t idx_list[amount];
+            int_fast8_t dupe;  
+            for (i = 0; i < 100000; i++) {
                 memset(idx_list, 0, amount);
                 magic = GetRandomMagic();
-                //if (Count((magic * rook_mask) & 0xff0000000000000ULL) < 6) continue; damn. removing this brought it from -> 150000 to 83000 - 87000                
                 dupe = false;
                 for (j = 0; j < amount; j++) {
-                    //const uint64 blocker = ROOKBLOCKERS[square][j];
-                    //idx = (magic * ROOKBLOCKER) >> (num_bits);
+                    idx = IDX(magic, BISHOPBLOCKER, b_bits[square]);
+                    if (idx_list[idx]) {
+                        dupe = true;
+                        break;
+                    }
+                    idx_list[idx] = true;
+                }
+                if (!dupe) {
+                    return magic;
+                }
+            }
+            return 0ULL;
+        } else {
+            constexpr uint64 rook_mask = _rook_mask[square];
+            constexpr uint64 num_bits = 64 - r_bits[square];
+            constexpr int amount = RookAmount[square];
+            uint64 magic;
+            int idx;
+            int i;
+            int j;
+            int_fast8_t dupe;
+            uint8_t idx_list[amount];
+            for (i = 0; i < 100000; i++) {
+                memset(idx_list, 0, amount);
+                magic = GetRandomMagic();
+                dupe = false;
+                for (j = 0; j < amount; j++) {
                     idx = IDX(magic, ROOKBLOCKER, r_bits[square]); //
                     if (idx_list[idx]) {
                         dupe = true;
@@ -119,7 +172,6 @@ namespace Magic{
                     idx_list[idx] = 1;
                 }
                 if (!dupe) {
-                    //std::cout << std::dec << "  rook fails: " << i << std::hex << "  ";
                     return magic;
                 }
             }
@@ -131,7 +183,7 @@ namespace Magic{
 int main() {
     std::srand(static_cast<uint64_t>(std::time(nullptr) ^ std::hash<std::thread::id>{}(std::this_thread::get_id()) ^ std::random_device{}()));
     {
-        // printf is slower than using std::cout
+        Seed();
         std::cout << "Rook_magic[64] = {" << '\n';
         Timer time;
         std::cout << "0x" << std::hex << Magic::GetMagicNumber<false, 0>() << "ULL,\n";
@@ -199,7 +251,11 @@ int main() {
         std::cout << "0x" << Magic::GetMagicNumber<false, 62>() << "ULL,\n";
         std::cout << "0x" << Magic::GetMagicNumber<false, 63>() << "ULL,\n";
         std::cout << "};" << '\n';
-    
+        for (int i = 0; i < 4096; i++){
+                collision_check[i] = 0;
+        }
+        current_gen = 1;
+        // seperate rook from bishop
         std::cout << "Bishop_magic[64] = {" << '\n';
         std::cout << "0x" << Magic::GetMagicNumber<true, 0>() << "ULL,\n";
         std::cout << "0x" << Magic::GetMagicNumber<true, 1>() << "ULL,\n";
@@ -266,7 +322,7 @@ int main() {
         std::cout << "0x" << Magic::GetMagicNumber<true, 62>() << "ULL,\n";
         std::cout << "0x" << Magic::GetMagicNumber<true, 63>() << "ULL,\n" << std::dec;
         std::cout << "};" << '\n';
-    
         std::cout << "Finished." << std::endl;
+        std::cout << next() << std::endl;
         }
 }

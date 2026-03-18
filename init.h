@@ -452,4 +452,3 @@ __builtin_popcountll(_b_mask(61)),
 __builtin_popcountll(_b_mask(62)),
 __builtin_popcountll(_b_mask(63))
 };
-
