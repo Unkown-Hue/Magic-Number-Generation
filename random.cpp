@@ -7,7 +7,6 @@
 #include <cstring>
 #include <cassert>
 
-// State must be seeded with something other than all zeros
 uint64_t s[4] = {4, 3, 2, 1};
 
 static inline uint64_t rotl(const uint64_t x, int k) {

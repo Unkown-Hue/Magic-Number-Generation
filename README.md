@@ -17,3 +17,6 @@ better candidate number generation and few tweaks
 
 # V6
 better candidate number generation, faster index calculation and few tweaks again.
+
+# V7
+memset removed, faster array reuse.
