@@ -34,10 +34,11 @@
 #define GetRandomMagic2() (GetRandomBits11() & GetRandomBits11() & GetRandomBits11()) // extremely slow -> 2000000
 #define GetRandomMagic3() ((rng() & rng() & rng()) | 0xF00000000000000ULL)
 #define GetRandomMagic4() ((rng() & rng() ) ^ (rng() ^ 0x02F000000000000ULL))
-#define GetRandomMagic6() (next() + GetRandomMagic())
+#define GetRandomMagic6() (splitmax() & splitmax() & splitmax())
 #define BISHOPBLOCKER BISHOPBLOCKERS[square][j]
 #define ROOKBLOCKER ROOKBLOCKERS[square][j]
 #define Count(b) (__builtin_popcountll(b))
+
 
 
 // magic candidate generator
@@ -51,15 +52,14 @@ inline uint64 Cgen(uint64 num){
 std::mt19937_64 rng(GetRandomBits5());
 std::mt19937_64 frng(GetRandomBits5());
 
-uint32_t collision_check[4096] = {0};
-uint32_t current_gen = 1;
-
 #define IDX(magic, mask, bits) (unsigned)((int)mask * (int)magic ^ (int)(mask >> 32) * \
                       (int)(magic >> 32)) >> (32 - bits);
 
-namespace fMagic{
+namespace Magic{
     template<bool Bishop, const int square>
     uint64 GetMagicNumber() {
+        uint32_t collision_check[4096] = {0};
+        uint16_t current_gen = 1;
         if constexpr (Bishop) {
             constexpr uint64 bishop_mask = _bishop_mask[square];
             constexpr uint64 num_bits = 64 - b_bits[square];
@@ -68,12 +68,11 @@ namespace fMagic{
             int idx;
             int i;
             int j;
-            uint8_t idx_list[amount];
-            int_fast8_t dupe;  
-            for (i = 0; i < 10000; i++) {
-                //memset(idx_list, 0, amount);
+            int_fast8_t dupe;
+            for (i = 0; i < 100000; i++) {
                 magic = GetRandomMagic();
                 dupe = false;
+                ++current_gen;
                 for (j = 0; j < amount; j++) {
                     idx = IDX(magic, BISHOPBLOCKER, b_bits[square]);
                     if (collision_check[idx] == current_gen) {
@@ -96,10 +95,9 @@ namespace fMagic{
             int i;
             int j;
             int_fast8_t dupe;
-            uint8_t idx_list[amount];
-            for (i = 0; i < 10000; i++) {
-                //memset(idx_list, 0, amount);
+            for (i = 0; i < 100000; i++) {
                 magic = GetRandomMagic();
+                //f (Count((magic) & 0xFF00000000000000ULL) > 6) continue;
                 dupe = false;
                 ++current_gen;
                 for (j = 0; j < amount; j++) {
@@ -119,7 +117,7 @@ namespace fMagic{
     }
 };
 
-namespace Magic{
+namespace fMagic{
     template<bool Bishop, const int square>
     uint64 GetMagicNumber() {
         if constexpr (Bishop) {
@@ -182,8 +180,8 @@ namespace Magic{
 
 int main() {
     std::srand(static_cast<uint64_t>(std::time(nullptr) ^ std::hash<std::thread::id>{}(std::this_thread::get_id()) ^ std::random_device{}()));
+    Seed();
     {
-        Seed();
         std::cout << "Rook_magic[64] = {" << '\n';
         Timer time;
         std::cout << "0x" << std::hex << Magic::GetMagicNumber<false, 0>() << "ULL,\n";
@@ -251,10 +249,6 @@ int main() {
         std::cout << "0x" << Magic::GetMagicNumber<false, 62>() << "ULL,\n";
         std::cout << "0x" << Magic::GetMagicNumber<false, 63>() << "ULL,\n";
         std::cout << "};" << '\n';
-        for (int i = 0; i < 4096; i++){
-                collision_check[i] = 0;
-        }
-        current_gen = 1;
         // seperate rook from bishop
         std::cout << "Bishop_magic[64] = {" << '\n';
         std::cout << "0x" << Magic::GetMagicNumber<true, 0>() << "ULL,\n";
@@ -323,6 +317,5 @@ int main() {
         std::cout << "0x" << Magic::GetMagicNumber<true, 63>() << "ULL,\n" << std::dec;
         std::cout << "};" << '\n';
         std::cout << "Finished." << std::endl;
-        std::cout << next() << std::endl;
         }
 }
