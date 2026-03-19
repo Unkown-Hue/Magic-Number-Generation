@@ -1,2 +1,2 @@
 all:
-	g++ -pg -std=c++23 random.cpp main.cpp -o main
+	g++ -O3 -std=c++23 random.cpp main.cpp -o main

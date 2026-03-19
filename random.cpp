@@ -1,11 +1,4 @@
-#include <stdint.h>
-#include <cstdint>
-#include <cstdlib>
-#include <thread>
-#include <random>
-#include <iostream>
-#include <cstring>
-#include <cassert>
+#include "random.h"
 
 uint64_t s[4] = {4, 3, 2, 1};
 

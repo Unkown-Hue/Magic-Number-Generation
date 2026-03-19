@@ -19,4 +19,7 @@ better candidate number generation and few tweaks
 better candidate number generation, faster index calculation and few tweaks again.
 
 # V7
-memset removed, faster array reuse.
+memset removed, faster array reuse and better candidate number generation.
+
+# Todo
+Reintroduce threaded generation up to 10 threads.

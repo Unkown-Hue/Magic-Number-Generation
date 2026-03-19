@@ -1,11 +1,7 @@
 #include <cstdint>
-#include <cstdlib>
-#include <thread>
 #include <random>
 #include <iostream>
-#include <cstring>
 #include <cassert>
-//#include <bitset> slow idk
 
 #include "time.h"
 #include "init.h"
@@ -14,45 +10,15 @@
 #include "random.h"
 
 // macros //
-#define R1 (uint64)(rand() & 0xFFFF)
-#define R2 (uint64)(rand() & 0xFFFF)
-#define R3 (uint64)(rand() & 0xFFFF)
-#define R4 (uint64)(rand() & 0xFFFF)
-#define Rand uint64(R1 | (R2 << 16) | (R3 << 32) | (R4 << 48))
-#define GetRandomBits() (Rand & Rand & Rand)
-#define GetRandomBits2() (Rand & Rand & Rand ^ (Rand & Rand)) // fastest -> 196000 - 240000 microseconds not very consistent
-#define GetRandomBits3() (Rand & Rand | Rand ^ (Rand & Rand))
-#define GetRandomBits4() (Rand ^ Rand | Rand & (Rand & Rand))
-#define GetRandomBits5() (Rand & Rand ^ (Rand & Rand)) // thrid fastest
-#define GetRandomBits6() (Rand & Rand ^ (Rand | (Rand & Rand & Rand))) // second fastest -> 220000 microseconds
-#define GetRandomBits7() (Rand & Rand & (Rand ^ (Rand & Rand & Rand))) // god damn slow -> actually 500000 microseconds
-#define GetRandomBits8() (Rand ^ Rand | (Rand & (Rand | Rand & Rand))) // slow -> almost 300000 microseconds
-#define GetRandomBits9() (Rand ^ Rand ^ (Rand & (Rand | Rand ^ Rand))) // slow -> 250000 microseconds
-#define GetRandomBits10() (Rand ^ Rand ^ (Rand & (Rand ^ Rand ^ Rand))) // slow -> 250000 microseconds
-#define GetRandomBits11() (Cgen(GetRandomBits2() | GetRandomBits5() ^ GetRandomBits())) // pretty fast -> 192000 -> 225000 more consistent
-#define GetRandomBits12() (splitmax()) // fastest -> 75000 microseconds at times and consistent
+#define GetRandomBits12() (splitmax())
 #define GetRandomMagic() (rng() & rng() & rng())
-#define GetRandomMagic2() (GetRandomBits11() & GetRandomBits11() & GetRandomBits11()) // extremely slow -> 2000000
-#define GetRandomMagic3() ((rng() & rng() & rng()) | 0xF00000000000000ULL)
-#define GetRandomMagic4() ((rng() & rng() ) ^ (rng() ^ 0x02F000000000000ULL))
-#define GetRandomMagic6() (splitmax() & splitmax() & splitmax())
 #define BISHOPBLOCKER BISHOPBLOCKERS[square][j]
 #define ROOKBLOCKER ROOKBLOCKERS[square][j]
-#define Count(b) (__builtin_popcountll(b))
-
-
-
-// magic candidate generator
-inline uint64 Cgen(uint64 num){ 
-    uint64 num2 = num ^ 0xffad0c2f;
-    uint64 num4 = num2 ^ num ^ (num ^ (num + 0xffed1cad24dfd1c4));
-    uint64 num3 = num2 ^ num;
-    return num ^ (num2 + (num2 ^ num3) ^ num4);
-}
+//
 
 std::mt19937_64 rng(GetRandomBits12());
-std::mt19937_64 frng(GetRandomBits5());
 
+// 32 bit multiplication
 #define IDX(magic, mask, bits) (unsigned)((int)mask * (int)magic ^ (int)(mask >> 32) * \
                       (int)(magic >> 32)) >> (32 - bits);
 
@@ -70,7 +36,7 @@ namespace Magic{
             int i;
             int j;
             int_fast8_t dupe;
-            for (i = 0; i < 100000; i++) {
+            for (i = 0; i < 1000000; i++) {
                 magic = GetRandomMagic();
                 dupe = false;
                 ++current_gen;
@@ -87,7 +53,8 @@ namespace Magic{
                 }
             }
             return 0ULL;
-        } else {
+        } 
+        else {
             constexpr uint64 rook_mask = _rook_mask[square];
             constexpr uint64 num_bits = 64 - r_bits[square];
             constexpr int amount = RookAmount[square];
@@ -96,9 +63,8 @@ namespace Magic{
             int i;
             int j;
             int_fast8_t dupe;
-            for (i = 0; i < 100000; i++) {
+            for (i = 0; i < 1000000; i++) {
                 magic = GetRandomMagic();
-                //f (Count((magic) & 0xFF00000000000000ULL) > 6) continue;
                 dupe = false;
                 ++current_gen;
                 for (j = 0; j < amount; j++) {
@@ -108,67 +74,6 @@ namespace Magic{
                         break;
                     }
                     collision_check[idx] = current_gen;
-                }
-                if (!dupe) {
-                    return magic;
-                }
-            }
-            return 0ULL;
-        }
-    }
-};
-
-namespace fMagic{
-    template<bool Bishop, const int square>
-    uint64 GetMagicNumber() {
-        if constexpr (Bishop) {
-            constexpr uint64 bishop_mask = _bishop_mask[square];
-            constexpr uint64 num_bits = 64 - b_bits[square];
-            constexpr int amount = BishopAmount[square];
-            uint64 magic;
-            int idx;
-            int i;
-            int j;
-            uint8_t idx_list[amount];
-            int_fast8_t dupe;  
-            for (i = 0; i < 100000; i++) {
-                memset(idx_list, 0, amount);
-                magic = GetRandomMagic();
-                dupe = false;
-                for (j = 0; j < amount; j++) {
-                    idx = IDX(magic, BISHOPBLOCKER, b_bits[square]);
-                    if (idx_list[idx]) {
-                        dupe = true;
-                        break;
-                    }
-                    idx_list[idx] = true;
-                }
-                if (!dupe) {
-                    return magic;
-                }
-            }
-            return 0ULL;
-        } else {
-            constexpr uint64 rook_mask = _rook_mask[square];
-            constexpr uint64 num_bits = 64 - r_bits[square];
-            constexpr int amount = RookAmount[square];
-            uint64 magic;
-            int idx;
-            int i;
-            int j;
-            int_fast8_t dupe;
-            uint8_t idx_list[amount];
-            for (i = 0; i < 100000; i++) {
-                memset(idx_list, 0, amount);
-                magic = GetRandomMagic();
-                dupe = false;
-                for (j = 0; j < amount; j++) {
-                    idx = IDX(magic, ROOKBLOCKER, r_bits[square]); //
-                    if (idx_list[idx]) {
-                        dupe = true;
-                        break;
-                    }
-                    idx_list[idx] = 1;
                 }
                 if (!dupe) {
                     return magic;
@@ -180,7 +85,6 @@ namespace fMagic{
 };
 
 int main() {
-    std::srand(static_cast<uint64_t>(std::time(nullptr) ^ std::hash<std::thread::id>{}(std::this_thread::get_id()) ^ std::random_device{}()));
     Seed();
     {
         std::cout << "Rook_magic[64] = {" << '\n';
